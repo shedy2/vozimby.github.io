@@ -1,0 +1,72 @@
+.c-footer {
+  background-color: #f2f2f2;
+  padding-bottom: 40px;
+  padding-top: 30px;
+  border-top: 1px solid gainsboro;
+
+  .footer_col a:hover,
+  .footer_col a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .footer_menu {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer_col {
+    display: inline-block;
+    width: 270px;
+    padding: 0;
+    margin-right: 35px;
+  }
+
+  .last {
+    margin-right: 0;
+  }
+
+  .dot {
+    width: 15px;
+    height: 15px;
+    margin: -38px auto 0;
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/dote.png) no-repeat;
+  }
+
+  .footer_menu hr {
+    margin: 0;
+    padding: 0;
+    border-width: 0 0 1px;
+    border-top-style: initial;
+    border-right-style: initial;
+    border-left-style: initial;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-left-color: initial;
+    border-image: initial;
+    border-bottom-style: dashed;
+    border-bottom-color: #ccc;
+  }
+
+  .footer_col {
+    margin-top: 24px;
+    vertical-align: top;
+  }
+
+  .footer_col ul {
+    list-style: none;
+    padding-left: 2px;
+  }
+
+  .footer_col ul li {
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/small_dote2.png) 0 4px no-repeat scroll rgba(0, 0, 0, 0);
+    margin-top: 12px;
+    padding-bottom: 9px;
+    padding-left: 21px;
+  }
+
+  .footer_col ul li a:hover {
+    color: #009ad7;
+    text-decoration: underline;
+  }
+}

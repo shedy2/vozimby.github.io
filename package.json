@@ -1,0 +1,21 @@
+{
+  "name": "simple-pages",
+  "author": "Grisha Pushkov <grisha@push.org.ru>",
+  "private": "true",
+  "dependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-watch": "^4.3.5"
+  },
+  "scripts": {
+    "deploy": "gulp build && rsync -rvc dist/ push.org.ru:www/files/vozim.by/",
+    "push-build": "gulp build && git checkout build && git fetch && git reset --hard origin/build && cp -r dist/* . && git add --all && git commit -m \"`date \"+%Y-%m-%d %H:%m\"`\" && git push && git checkout master"
+  }
+}

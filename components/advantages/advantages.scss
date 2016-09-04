@@ -1,0 +1,88 @@
+.c-advantages {
+  width: 1200px;
+  margin: 76px auto 94px;
+  position: relative;
+
+  .clear {
+    clear: both;
+  }
+
+  .icon {
+    display: inline-block;
+    background: url(http://vozim.by/wp-content/uploads/sprite.png) 0 0 no-repeat;
+  }
+
+  .bage_field {
+    width: 25%;
+    float: left;
+    color: #323232;
+    text-align: center;
+  }
+
+  .bage_field:last-child .icon::before {
+    height: 0;
+  }
+
+  .bage_field:last-child .icon::after {
+    height: 0;
+  }
+
+  .icon {
+    height: 189px;
+    width: 240px;
+    margin: 0 auto 19px;
+    position: relative;
+  }
+
+  .icon::before {
+    background: none 0 0 repeat scroll #e1e0e0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 213px;
+    position: absolute;
+    top: 94px;
+    width: 113px;
+  }
+
+  .icon::after {
+    background: url(http://vozim.by/wp-content/uploads/sprite.png) -181px 0 repeat scroll rgba(0, 0, 0, 0);
+    content: "";
+    display: block;
+    height: 15px;
+    position: absolute;
+    right: -37px;
+    top: 87px;
+    width: 15px;
+  }
+
+  .icon-mac {
+    background: url(http://vozim.by/wp-content/uploads/sprite.png) -5px -145px;
+  }
+
+  .icon-percent {
+    background: url(http://vozim.by/wp-content/uploads/sprite.png) -251px -145px;
+  }
+
+  .icon-message {
+    background: url(http://vozim.by/wp-content/uploads/sprite.png) -5px -341px;
+  }
+
+  .icon-time {
+    background: url(http://vozim.by/wp-content/uploads/sprite.png) -251px -341px;
+  }
+
+  .title {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 16px;
+    letter-spacing: -0.65px;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 0 40px;
+    margin-top: 17px;
+    letter-spacing: -0.6px;
+  }
+}

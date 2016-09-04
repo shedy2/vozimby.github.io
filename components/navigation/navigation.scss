@@ -1,0 +1,111 @@
+.c-navigation {
+  height: 80px;
+  background-color: #f2f2f2;
+
+  .big-menu {
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 15px;
+    position: relative;
+  }
+
+  .menu-item:last-child,
+  .menu-item:first-child {
+    border-left: 1px solid #cecece;
+  }
+
+  .menu-item {
+    display: block;
+    float: left;
+    border-right: 1px solid #cecece;
+    background-color: #f2f2f2;
+    height: 56px;
+    text-transform: uppercase;
+    width: 238px;
+    color: #707070;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 24px;
+    position: relative;
+    z-index: 20;
+  }
+
+  .menu-item span {
+    margin-left: 4px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 110px;
+    text-align: left;
+    font-family: Callibri, Verdana;
+  }
+
+  .menu-item.menu-item-21762 span {
+    width: 166px;
+  }
+
+  .menu-item:hover,
+  .menu-item.active {
+    color: #009ad7;
+  }
+
+  .menu-item:hover .icon-lock {
+    background-position: -196px -108px;
+  }
+
+  .menu-item:hover .icon-onlyrb,
+  .menu-item.active .icon-onlyrb {
+    background-position: -589px -500px;
+  }
+
+  .menu-item:hover .icon-onlyminsk {
+    background-position: -547px -469px;
+  }
+
+  .menu-item:hover .icon-carts {
+    background-position: -544px -435px;
+  }
+
+  .menu-item:hover::before,
+  .menu-item.active::before {
+    background: url(http://vozim.by/wp-content/uploads/sprite.png) -123px -40px no-repeat;
+    content: "";
+    display: block;
+    height: 13px;
+    position: absolute;
+    top: 0;
+    width: 23px;
+    left: -12px;
+    margin-left: 50%;
+  }
+
+  .menu-item.active span {
+    font-weight: bold;
+  }
+
+  .menu-item .icon-submenu {
+    vertical-align: middle;
+    height: 30px;
+    width: 42px;
+    display: inline-block;
+    margin-top: 1px;
+    background: url(http://vozim.by/wp-content/uploads/sprite.png);
+  }
+
+  .menu-item .icon-lock {
+    background-position: -196px -70px;
+  }
+
+  .menu-item .icon-onlyrb {
+    background-position: -547px -500px;
+  }
+
+  .menu-item .icon-onlyminsk {
+    background-position: -589px -469px;
+  }
+
+  .menu-item .icon-carts {
+    background-position: -586px -435px;
+    height: 31px;
+  }
+}
