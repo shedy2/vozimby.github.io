@@ -1,0 +1,28 @@
+.c-page-job {
+
+  .intro {
+    width: 977px;
+    margin: auto;
+    padding-left: 23px;
+    font-size: 16px;
+  }
+
+  .intro strong {
+    color: #00ade8;
+    font-weight: 400;
+  }
+
+  .intro p:nth-child(1) {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  .intro p:nth-child(2) {
+    text-align: center
+  }
+
+  .job-form-wrapper {
+    width: 1000px;
+    margin: auto;
+  }
+}

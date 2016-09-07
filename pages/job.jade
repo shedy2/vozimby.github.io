@@ -1,0 +1,28 @@
+extends layout/layout
+
+block variables
+  - var page = 'job'
+  - var title = 'Работа у нас'
+
+block content
+  include ../components/header/header
+  - var navigation = 0
+  include ../components/navigation/navigation
+
+  .g-page-content
+
+    h1.g-line Вакансии
+    .intro
+      p
+        | Мы компания, которая точно знает – <strong>стоять на месте нельзя</strong>!
+        | Оставаться на одном уровне – значит идти назад.<br>
+        | Поэтому мы всегда готовы <strong>развивать штат своих работников</strong>,
+        | чтобы сделать доставку посылок из интернет магазинов и грузов еще более совершенной.
+        | Готовы помочь сделать доставку более удобной? Добро пожаловать в нашу команду!
+
+      p Стоит сделать только первый шаг.
+      
+    .job-form-wrapper
+      include ../components/job-form/job-form
+
+  include ../components/footer/footer

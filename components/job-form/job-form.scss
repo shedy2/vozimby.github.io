@@ -1,0 +1,50 @@
+.c-job-form {
+  .last {
+    margin-right: 0;
+  }
+  #jobinfo-wrap {
+    width: 990px;
+    background-color: white;
+    box-shadow: #00a2e8 0 0 5px 1px, #00a2e8 0 0 3px 1px inset;
+  }
+  .jobinfo {
+    resize: none;
+    padding: 0 10px 10px 23px;
+    width: 955px;
+    height: 45px;
+    border-style: solid;
+    border-color: #0090c9;
+    border-image: initial;
+    border-width: 0 1px;
+    outline: none;
+    box-shadow: none;
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/jplace-t.png) 24px 0 no-repeat transparent;
+  }
+  .jobinfo.first {
+    border-width: 1px 1px 0;
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+  .jobinfo.last {
+    border-width: 0 1px 1px;
+    padding-bottom: 10px;
+  }
+  .btn {
+    outline: none;
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/btn.png) 0 -78px no-repeat;
+    padding: 0;
+    border: 0 none;
+    display: inline-block;
+    height: 38px;
+    width: 135px;
+    color: white;
+    font-size: 14px;
+    font-family: Calibri, Tahoma, sans-serif;
+  }
+  .btn:hover {
+    background-position: 0 -39px;
+  }
+  .btn:active {
+    background-position: 0 0;
+  }
+}
