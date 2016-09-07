@@ -2,7 +2,7 @@
   overflow: hidden;
   position: relative;
   background-color: #00a6e5;
-  background-image: url(http://vozim.by/wp-content/themes/vozim/css/../images/stripes.png);
+  background-image: url(static/images/common-stripes.png);
   width: 100%;
   padding-top: 70px;
   height: 715px;
@@ -23,7 +23,7 @@
   .map_inner .logo {
     width: 510px;
     height: 195px;
-    background-image: url(http://vozim.by/wp-content/themes/vozim/css/../images/logo.png);
+    background-image: url(static/images/hero-logo.png);
     background-repeat: no-repeat;
     display: inline-block;
   }
@@ -31,7 +31,7 @@
   .map_inner .info {
     width: 640px;
     height: 140px;
-    background-image: url(http://vozim.by/wp-content/themes/vozim/css/../images/mapbl.png);
+    background-image: url(static/images/hero-frame.png);
     display: inline-block;
     vertical-align: top;
     float: right;
@@ -70,7 +70,7 @@
   }
 
   .map_hint a {
-    background: url(http://vozim.by/wp-content/uploads/sprite.png) -558px -277px;
+    background: url(static/images/common-sprite.png) -558px -277px;
     height: 40px;
     width: 26px;
     display: inline-block;
@@ -82,7 +82,7 @@
   }
 
   .map_hint a::before {
-    background: url(http://vozim.by/wp-content/uploads/sprite.png) -596px -276px;
+    background: url(static/images/common-sprite.png) -596px -276px;
     height: 40px;
     width: 48px;
     position: absolute;
@@ -97,7 +97,7 @@
     width: 270px;
     position: relative;
     z-index: 1;
-    background-image: url(http://vozim.by/wp-content/themes/vozim/css/../images/bcloud.png) !important;
+    background-image: url(static/images/hero-cloud.png) !important;
   }
 
   #drop {

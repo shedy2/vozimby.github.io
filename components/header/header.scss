@@ -62,7 +62,7 @@
     width: 281px;
     height: 47px;
     line-height: 47px;
-    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/toppay.png?v=2) 144px center no-repeat #f2f2f2;
+    background: url(static/images/header-pay-logo.png) 144px center no-repeat #f2f2f2;
     text-transform: uppercase;
     color: #707070;
     font-size: 12px;
@@ -122,7 +122,7 @@
   .soc_btn {
     height: 46px;
     width: 48px;
-    background: url(http://vozim.by/wp-content/uploads/sprite.png) -48px 0;
+    background: url(static/images/common-sprite.png) -48px 0;
     float: right;
     margin-left: 2px;
   }
@@ -144,15 +144,15 @@
   }
 
   .soc_btn .skype {
-    background: url(http://vozim.by/wp-content/uploads/sprite.png) 0 -47px;
+    background: url(static/images/common-sprite.png) 0 -47px;
   }
 
   .soc_btn .vk {
-    background: url(http://vozim.by/wp-content/uploads/sprite.png) -39px -46px;
+    background: url(static/images/common-sprite.png) -39px -46px;
   }
 
   .soc_btn .email {
-    background: url(http://vozim.by/wp-content/uploads/sprite.png) -155px -46px;
+    background: url(static/images/common-sprite.png) -155px -46px;
   }
 
   .soc_btn div {
@@ -162,7 +162,7 @@
   }
 
   .icon {
-    background: url(http://vozim.by/wp-content/uploads/sprite.png) 0 0 no-repeat;
+    background: url(static/images/common-sprite.png) 0 0 no-repeat;
   }
 
   .icon.icon-btime {
@@ -180,7 +180,7 @@
   }
 
   .header .icon-menu.icon-mobilephone {
-    background: url(http://vozim.by/wp-content/uploads/sprite.png) -629px -420px no-repeat;
+    background: url(static/images/common-sprite.png) -629px -420px no-repeat;
     width: 36px;
     height: 50px;
     margin-top: -7px;
@@ -190,11 +190,11 @@
     width: 58px;
     height: 63px;
     display: inline-block;
-    background: url(http://vozim.by/wp-content/uploads/sprite.png);
+    background: url(static/images/common-sprite.png);
   }
 
   #opinions-toggle {
-    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/btn.png) 0 -117px no-repeat;
+    background: url(static/images/common-sprite-buttons.png) 0 -117px no-repeat;
     width: 159px;
     height: 48px;
     float: right;

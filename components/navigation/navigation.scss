@@ -70,7 +70,7 @@
 
   .menu-item:hover::before,
   .menu-item.active::before {
-    background: url(http://vozim.by/wp-content/uploads/sprite.png) -123px -40px no-repeat;
+    background: url(static/images/common-sprite.png) -123px -40px no-repeat;
     content: "";
     display: block;
     height: 13px;
@@ -91,7 +91,7 @@
     width: 42px;
     display: inline-block;
     margin-top: 1px;
-    background: url(http://vozim.by/wp-content/uploads/sprite.png);
+    background: url(static/images/common-sprite.png);
   }
 
   .menu-item .icon-lock {

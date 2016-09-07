@@ -1,14 +1,14 @@
 .c-how-it-works-online {
   overflow: hidden;
   height: 326px;
-  background: url(http://vozim.by/wp-content/themes/vozim/css/../images/stripes.png) 0 0 repeat #00a6e5;
+  background: url(static/images/common-stripes.png) 0 0 repeat #00a6e5;
   box-shadow: rgba(0, 0, 0, 0.298039) 0 7px 27px inset;
 
   .way-wrap {
     width: 1200px;
     height: 100%;
     margin: 0 auto;
-    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/dway.png) 75px center no-repeat;
+    background: url(static/images/how-it-works-online-way.png) 75px center no-repeat;
   }
 
   p {
@@ -46,10 +46,6 @@
     width: 420px;
     margin-top: 242px;
     margin-left: 805px;
-  }
-
-  .way-wrap {
-    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/dway-newy.png) center 75px no-repeat;
   }
 
   p {

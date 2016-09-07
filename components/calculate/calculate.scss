@@ -51,7 +51,7 @@
   }
 
   .icon {
-    background: url(http://vozim.by/wp-content/uploads/sprite.png) 0 0 no-repeat;
+    background: url(static/images/common-sprite.png) 0 0 no-repeat;
   }
 
   .hr {
@@ -65,7 +65,7 @@
   }
 
   .hr::after {
-    background: url(http://vozim.by/wp-content/uploads/sprite.png) -181px 0 repeat scroll rgba(0, 0, 0, 0);
+    background: url(static/images/common-sprite.png) -181px 0 repeat scroll rgba(0, 0, 0, 0);
     content: "";
     display: block;
     height: 15px;
@@ -80,12 +80,12 @@
     width: 58px;
     height: 63px;
     display: inline-block;
-    background: url(http://vozim.by/wp-content/uploads/sprite.png);
+    background: url(static/images/common-sprite.png);
   }
 
   .btn {
     outline: none;
-    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/btn.png) 0 -78px no-repeat;
+    background: url(static/images/common-sprite-buttons.png) 0 -78px no-repeat;
     padding: 0;
     border: 0 none;
     display: inline-block;
@@ -203,7 +203,7 @@
 
   .js-form .styled-select {
     border: 1px solid #d9d8d6;
-    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/select.arrow.png) right bottom no-repeat white;
+    background: url(static/images/calculate-arrow.png) right bottom no-repeat white;
     width: 228px;
     overflow: hidden;
   }
