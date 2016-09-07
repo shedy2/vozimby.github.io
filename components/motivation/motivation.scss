@@ -1,0 +1,73 @@
+.c-motivation {
+    overflow: hidden;
+    height: 326px;
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/stripes.png) 0 0 repeat #00a6e5;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0 7px 27px inset;
+
+  .way-wrap {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/dway.png) 75px center no-repeat;
+  }
+
+  p {
+    margin: 0;
+    color: white;
+    font-family: Tahoma, sans-serif;
+  }
+
+  .way-head {
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .way-head1 {
+    width: 720px;
+    font-size: 23px;
+    margin-left: 230px;
+    margin-top: 15px;
+  }
+
+  .way-head2 {
+    width: 460px;
+    margin-top: 242px;
+    margin-left: -90px;
+  }
+
+  .way-head3 {
+    width: 420px;
+    margin-top: 242px;
+    margin-left: 380px;
+  }
+
+  .way-head4 {
+    width: 420px;
+    margin-top: 242px;
+    margin-left: 805px;
+  }
+
+  .way-wrap {
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/dway-minsk.png) 60px center no-repeat;
+  }
+
+  .way-head2 {
+    margin-left: -100px;
+  }
+
+  .way-head3 {
+    margin-left: 400px;
+    width: 440px;
+  }
+
+  .way-head4 {
+    margin-left: 865px;
+  }
+
+  .way-head2,
+  .way-head3,
+  .way-head4 {
+    font-size: 19px;
+  }
+}

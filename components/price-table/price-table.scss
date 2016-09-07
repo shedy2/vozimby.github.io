@@ -1,0 +1,131 @@
+.c-price-table {
+
+  .line {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 35px;
+    font-size: 22px;
+    letter-spacing: -1.15px;
+    font-family: Verdana;
+  }
+
+  .line::before,
+  .line::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: #e1e0e0;
+    z-index: -1;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .line::before {
+    right: 15px;
+    margin: -4px 0 0 -100%;
+  }
+
+  .line::after {
+    left: 15px;
+    margin: -4px -100% 0 0;
+  }
+
+  h3 {
+    letter-spacing: -0.65px;
+  }
+
+  .wrap {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  table.pretty-table {
+    border-spacing: 12px;
+    border-collapse: separate;
+    table-layout: fixed;
+  }
+
+  table.pretty-table.tsp4 {
+    border-spacing: 4px;
+  }
+
+  table.pretty-table tr td,
+  table.pretty-table tr th {
+    font-size: 14px;
+    text-align: center;
+    border-width: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  table.pretty-table tr th {
+    background-color: #a6a6a6;
+    color: white;
+  }
+
+  table.pretty-table tr td {
+    background-color: #f2f2f2;
+    color: #404040;
+    padding: 16px 0;
+    width: 241px;
+  }
+
+  table.pretty-table tr:nth-child(2n+1) td {
+    background-color: #d9d9d9;
+  }
+
+  table.pretty-table tr td.thd {
+    background-color: #3d9cd4;
+    text-transform: uppercase;
+    color: white;
+    width: 183px;
+  }
+
+  table.pretty-table tr th.thd1 {
+    background-color: #3d9cd4;
+    color: white;
+    width: 183px;
+  }
+
+  table.pretty-table.ivertbg tr td,
+  table.pretty-table.ivertbg tr th {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  table.pretty-table.ivertbg tr:nth-child(2n+1) td {
+    background-color: transparent;
+  }
+
+  table.pretty-table.ivertbg tr:nth-child(2n+1) td span {
+    background-color: #f2f2f2;
+  }
+
+  table.pretty-table.ivertbg tr th span {
+    display: block;
+    padding: 16px 0;
+    background-color: #a6a6a6;
+  }
+
+  table.pretty-table.ivertbg tr td span {
+    display: block;
+    padding: 16px 0;
+    margin: 4px;
+    background-color: #d9d9d9;
+  }
+
+  table.pretty-table.ivertbg tr th.nospace span {
+    padding: 0;
+  }
+
+  table.pretty-table.ivertbg tr td.thd span {
+    background-color: #3d9cd4;
+    text-transform: uppercase;
+    color: white;
+  }
+}

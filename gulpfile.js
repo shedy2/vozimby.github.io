@@ -62,7 +62,7 @@ gulp.task('serve', ['build'], function() {
     open: false
   })
 
-  watch(['styles/**', 'components/**/*.sass'], function() {
+  watch(['styles/**', 'components/**/*.scss'], function() {
     gulp.start('styles')
   })
 

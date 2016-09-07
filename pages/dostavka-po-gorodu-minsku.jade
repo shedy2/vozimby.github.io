@@ -1,0 +1,17 @@
+extends layout/layout
+
+block variables
+  - var page = 'dostavka-po-gorodu-minsku'
+  - var title = 'Доставка по городу Минску'
+
+block content
+  include ../components/header/header
+  - var navigation = 2
+  include ../components/navigation/navigation
+  
+  .page-content
+    include ../components/intro/intro
+    include ../components/motivation/motivation
+    include ../components/price-table/price-table
+    
+  include ../components/footer/footer
