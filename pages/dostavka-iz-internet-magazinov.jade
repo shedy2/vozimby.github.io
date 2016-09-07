@@ -1,0 +1,18 @@
+extends layout/layout
+
+block variables
+  - var page = 'dostavka-iz-internet-magazinov'
+  - var title = 'Доставка из Интернет-магазинов'
+
+block content
+  include ../components/header/header
+  - var navigation = 3
+  include ../components/navigation/navigation
+  
+  .g-page-content
+  
+    h1.g-line Доставка из Интернет-магазинов
+    include ../components/how-it-works-online/how-it-works-online
+    include ../components/calculate-online/calculate-online
+  
+  include ../components/footer/footer

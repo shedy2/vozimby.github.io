@@ -1,6 +1,7 @@
 @import '../vendor/bootstrap/bootstrap';
 
 @import 'base';
+@import 'global';
 
 @import '../components/header/header';
 @import '../components/footer/footer';
@@ -9,8 +10,9 @@
 @import '../components/advantages/advantages';
 @import '../components/how-it-works/how-it-works';
 @import '../components/calculate/calculate';
-@import '../components/intro/intro';
 @import '../components/motivation/motivation';
 @import '../components/price-table/price-table';
+@import '../components/how-it-works-online/how-it-works-online';
+@import '../components/calculate-online/calculate-online';
 
 @import '../components/page-dostavka-po-gorodu-minsku/page-dostavka-po-gorodu-minsku';

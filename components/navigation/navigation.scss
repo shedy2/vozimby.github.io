@@ -63,7 +63,8 @@
     background-position: -547px -469px;
   }
 
-  .menu-item:hover .icon-carts {
+  .menu-item:hover .icon-carts,
+  .menu-item.active .icon-carts {
     background-position: -544px -435px;
   }
 

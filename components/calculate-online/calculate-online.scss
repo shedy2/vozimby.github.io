@@ -1,0 +1,384 @@
+.c-calculate-online {
+  width: 890px;
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #323232;
+  font-size: 14px;
+  margin: 0 auto;
+
+  .prettycheckbox {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  .prettycheckbox > a {
+    height: 30px;
+    width: 30px;
+    display: block;
+    float: left;
+    cursor: pointer;
+    margin: 0;
+    background: url(http://vozim.by/wp-content/themes/vozim/lib/prettyCheckable/dist/../img/sprites-sfa68604977.png);
+  }
+  .prettycheckbox label {
+    display: block;
+    float: left;
+    margin: 6px 5px;
+    cursor: pointer;
+  }
+  .prettycheckbox > a {
+    background-position: 0 0;
+  }
+  .prettycheckbox > a.checked {
+    background-position: -60px 0;
+  }
+  input[type="text"] {
+    vertical-align: top;
+    margin-left: 9px;
+    margin-top: 7px;
+    padding: 11px;
+    font-size: 14px;
+    background: white;
+    border: 1px solid #d7d6d4;
+  }
+  .last {
+    margin-right: 0;
+  }
+  .icon {
+    background: url(http://vozim.by/wp-content/uploads/sprite.png) 0 0 no-repeat;
+  }
+  .hr {
+    background: none 0 0 repeat scroll #e1e0e0;
+    content: "";
+    display: block;
+    height: 1px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 86px;
+  }
+  .hr::after {
+    background: url(http://vozim.by/wp-content/uploads/sprite.png) -181px 0 repeat scroll rgba(0, 0, 0, 0);
+    content: "";
+    display: block;
+    height: 15px;
+    left: -7px;
+    margin-left: 50%;
+    position: absolute;
+    top: -7px;
+    width: 15px;
+  }
+  .icon {
+    width: 58px;
+    height: 63px;
+    display: inline-block;
+    background: url(http://vozim.by/wp-content/uploads/sprite.png);
+  }
+  .btn {
+    outline: none;
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/btn.png) 0 -78px no-repeat;
+    padding: 0;
+    border: 0 none;
+    display: inline-block;
+    height: 38px;
+    width: 135px;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+  }
+  .btn:hover {
+    background-position: 0 -39px;
+  }
+  .btn:active {
+    background-position: 0 0;
+  }
+  .columns .column {
+    float: left;
+    font-size: 15px;
+  }
+  .column.column-citychecker {
+    width: 302px;
+  }
+  .column.column-checker {
+    width: 240px;
+    margin-left: 90px;
+    margin-right: 0;
+  }
+  .column.column-calculator {
+    width: 434px;
+    margin-left: 134px;
+  }
+  .column .bhead-wrapper {
+    height: 48px;
+  }
+  .column .bhead-wrapper .bhead {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding-bottom: 5px;
+  }
+  .column .bhead-wrapper.fix .bhead {
+    padding-top: 22px;
+  }
+  .column.column-citychecker .bhead {
+    padding-left: 10px;
+  }
+  .js-form .jsform-body {
+    min-height: 231px;
+    padding-top: 22px;
+    border-top: 1px solid #939393;
+  }
+  .js-form .jsform-submit {
+    border-bottom: 1px solid #939393;
+    padding-bottom: 6px;
+    padding-right: 23px;
+    text-align: right;
+  }
+  .js-form .jsform-result {
+    height: 169px;
+  }
+  .js-form .controls,
+  .js-form .labels {
+    float: left;
+  }
+  .js-form .control-group {
+    border-bottom: 1px dashed #c2c2c2;
+    padding: 15px 0;
+  }
+  .js-form .control-group.first {
+    padding-top: 0;
+  }
+  .js-form .control-group.last {
+    border-bottom: none;
+  }
+  .js-form .btn {
+    font-weight: normal;
+    font-family: Calibri, Tahoma, sans-serif;
+  }
+  .js-form input[type="text"] {
+    border: 1px solid #d9d8d6;
+    padding: 3px;
+    margin-left: 0;
+    border-radius: 0;
+  }
+  .js-form input:hover {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .js-form .styled-select.filled {
+    border: 1px solid #009ad8;
+  }
+  .js-form .styled-select {
+    border: 1px solid #d9d8d6;
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/select.arrow.png) right bottom no-repeat white;
+    width: 228px;
+    overflow: hidden;
+  }
+  .js-form .styled-select select {
+    width: 247px;
+    height: 29px;
+    padding: 5px;
+    background: transparent;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+  .js-form .styled-select select.dependent-sub {
+    border-top: 1px dotted #d9d8d6;
+  }
+  .columns .js-form .labels {
+    margin-top: 2px;
+  }
+  #citychecker .jsform-body {
+    padding-left: 9px;
+  }
+  #citychecker #checkcityinp {
+    width: 228px;
+    margin: 0;
+  }
+  #citychecker .control-group {
+    padding: 0;
+  }
+  #citychecker-result {
+    font-size: 18px;
+    color: #00b5e1;
+    margin: 25px 30px 0 9px;
+  }
+  #citychecker .jsform-submit {
+    padding-right: 58px;
+  }
+  .column-calculator .tip {
+    line-height: 30px;
+    font-size: 13px;
+    color: #0090c9;
+    cursor: pointer;
+  }
+  #calculation .labels {
+    width: 160px;
+  }
+  #calculation .nomargin {
+    margin-top: 0;
+  }
+  #calculation .controls {
+    width: 270px;
+    margin-top: -2px;
+  }
+  #calculation .styled-select {
+    width: 245px;
+  }
+  #calculation .styled-select select {
+    width: 260px;
+  }
+  #calculation .jsform-submit {
+    padding-right: 23px;
+  }
+  #calculation .control-group-dimension {
+    padding-top: 0;
+  }
+  #calculation .control-group-dimension .labels,
+  #calculation .control-group-dimension .controls {
+    float: none;
+    width: 100%;
+  }
+  #calculation .control-group-dimension .labels {
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+  #calculation .control-group-dimension .labels label {
+    text-transform: uppercase;
+  }
+  #calculation .control-group-cost input {
+    margin-top: 0;
+    width: 240px;
+  }
+  #calculation .controls-fromstore {
+    margin: 8px 0 0 159px;
+    height: 30px;
+  }
+  #clc-dimension .inp-group {
+    float: left;
+    width: 120px;
+    margin-right: 20px;
+  }
+  #clc-dimension .inp-group.last {
+    margin-right: 0;
+  }
+  #clc-dimension .lbl {
+    line-height: 29px;
+  }
+  #clc-dimension .lbl-before {
+    padding-right: 14px;
+  }
+  #clc-dimension .lbl-after {
+    padding-left: 5px;
+  }
+  #clc-dimension .inp-group .lbl {
+    padding-left: 4px;
+  }
+  #clc-dimension input {
+    width: 73px;
+    margin: 0;
+    text-align: center;
+  }
+  #calculation .control-group-locality .labels {
+    width: 128px;
+  }
+  #calculation .control-group-locality .controls {
+    width: 298px;
+  }
+  #calculation .control-group-locality input {
+    width: 238px;
+  }
+  #calculation .control-group-locality .tip,
+  #calculation .control-group-locality .watch-on-map,
+  #calculation .control-group-locality span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #calculation .watch-on-map {
+    text-decoration: none;
+  }
+  #calculation .watch-on-map .map35 {
+    fill: #dadada;
+  }
+  #calculation .control-group-additional .tip {
+    line-height: 34px;
+  }
+  #clc-result {
+    font-size: 18px;
+    margin-top: 18px;
+    white-space: nowrap;
+  }
+  #rstatus input[type="text"] {
+    width: 75px;
+    margin: 0;
+  }
+  #rstatus .jsform-submit {
+    padding-right: 35px;
+  }
+  #rstatus .labels {
+    width: 122px;
+  }
+  #rstatus .controls {
+    width: 118px;
+    min-height: 30px;
+  }
+  #rstatus-result .icon-status {
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/status.list.png) 0 0 no-repeat;
+    width: 105px;
+    height: 88px;
+  }
+  #rstatus-result .rstatus-res {
+    color: #0199da;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 25px;
+  }
+  #rstatus-result .delivery .icon-status {
+    background-position: 0 -171px;
+  }
+  #rstatus-result .planed .icon-status {
+    background-position: 0 -98px;
+    height: 68px;
+  }
+  #rstatus-result .return .icon-status {
+    background-position: 0 0;
+    height: 95px;
+  }
+  #rstatus-result .delivered .icon-status {
+    background-position: 0 -262px;
+  }
+  #rstatus-result .process {
+    font-size: 14px;
+  }
+  .hr::after {
+    display: none;
+  }
+  .hr {
+    margin-bottom: 40px;
+  }
+  .columns {
+    width: 870px;
+    margin: 0 auto;
+  }
+  #citychecker #checkcityinp {
+    float: right;
+  }
+  #citychecker .jsform-submit {
+    padding-right: 0;
+  }
+  .js-form .jsform-result {
+    height: 110px;
+  }
+  .column.column-checker {
+    display: none;
+  }
+  .notice {
+    font-size:12px;
+    font-style:italic;
+  }
+}
