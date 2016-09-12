@@ -222,3 +222,47 @@
     display: none;
   }
 }
+
+.c-popup-governance {
+
+  .title {
+    margin-top: 16px;
+    font-weight: bold;
+    margin-bottom: 21px;
+    text-decoration: underline;
+  }
+  .modal {
+    display: block;
+  }
+  .modal-dialog {
+    top: 20%;
+  }
+  .modal-content {
+    border: 2px solid #3d9cd4;
+    box-shadow: rgba(0, 159, 216, 0.470588) 0 5px 14px;
+  }
+  .modal-body {
+    background: white;
+    box-shadow: rgba(0, 159, 216, 0.380392) 0 0 10px inset;
+  }
+  .title {
+    text-decoration: none;
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+  }
+  .modal-body p {
+    font-size: 16px;
+  }
+  .modal-content::after {
+    display: none;
+  }
+  .modal-dialog.with_close .close {
+    color: #6b6b6b;
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/iclose.png) 0 0 no-repeat;
+    width: 13px;
+    height: 16px;
+    display: block;
+    margin-top: 7px;
+  }
+}

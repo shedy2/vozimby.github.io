@@ -14,6 +14,9 @@ html
   body(class='c-page-' + page)
     .g-container
       block content
+
+    include ../../components/popup/popup-opinions
+    include ../../components/popup/popup-governance
       
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
     script(src='vendor.js')
