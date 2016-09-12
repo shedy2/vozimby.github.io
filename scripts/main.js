@@ -5,6 +5,7 @@ window.app = {
 
     var base = function(selector) {
       if (!selector) return $('.c-' + name)
+      else if (typeof selector == 'object') return $(selector)
       else return $('.c-' + name).find(selector)
     }
     $.extend(base, $)

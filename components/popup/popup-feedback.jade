@@ -1,0 +1,74 @@
+.c-popup.c-popup-feedback(data-type='feedback')
+  .modal-backdrop.fade.in
+  #opinions.modal.fade.in(aria-hidden='false', aria-labelledby='myModalLabel', role='dialog', tabindex='-1', style='display: block;')
+    .modal-dialog.opinions.with_close
+      .modal-content
+        .modal-body
+          a.close(aria-hidden='true', data-dismiss='modal') x
+          .body
+            ul#myTab.nav.nav-tabs
+              li.active(style='left:-1px;')
+                a(data-toggle='tab', href='#blagod') Благодарность курьеру
+              li(style='margin-left:8px;')
+                a(data-toggle='tab', href='#zaloba') Жалоба на курьера
+            .tab-content
+              #zaloba.zaloba.tab-pane
+                form#couriercomplain.js-form.courierjs-form(method='post', action='/api.php')
+                  input(type='hidden', name='form', value='courier')
+                  input(type='hidden', name='Complaints[type]', value='0')
+                  .complaint-info.clearfix
+                    .now.complaint-ib.clearfix
+                      .zaloba-seria
+                        .punkt Серия
+                        input(name='Complaints[series]', type='text')
+                      .zaloba-seria.zaloba-seria-mrg
+                        .punkt Номер
+                        input(name='Complaints[number]', type='text')
+                    .dont-now.complaint-ib.clearfix(style='width:380px;display:none;')
+                      .zaloba-seria
+                        .punkt Дата
+                        input.datepicker(name='Complaints[date]', type='text')
+                      .zaloba-seria.zaloba-seria-mrg
+                        .punkt Город
+                        input(name='Complaints[city]', type='text')
+                      .zaloba-seria.zaloba-seria-nl
+                        .vid-dostavka Вид товара
+                        input.inp-dostavka(name='Complaints[delivery]', type='text')
+                    .zaloba-seria.zaloba-seria-rt.complaint-switch.complaint-ib
+                      span.styled-checkbox
+                        input#dont-chk(name='vehicle', type='checkbox')
+                      span(style='margin:0px;position:relative;top:-2px;') Я не знаю серию и номер
+                  .zaloba-text
+                    textarea(cols='30', name='Complaints[content]', rows='3')
+                  .zaloba-chec
+                    input.btn(type='submit', value='Отправить')
+              #blagod.tab-pane.active
+                form#courierinfo.js-form.courierjs-form(method='post', action='/api.php')
+                  input(type='hidden', name='form', value='courier')
+                  input(type='hidden', name='Complaints[type]', value='1')
+                  .complaint-info.clearfix
+                    .blagod-now.complaint-ib.clearfix
+                      .zaloba-seria
+                        .punkt Серия
+                        input(name='Complaints[series]', type='text')
+                      .zaloba-seria.zaloba-seria-mrg
+                        .punkt Номер
+                        input(name='Complaints[number]', type='text')
+                    .blagod-not-now.complaint-ib.clearfix(style='width:380px;display:none;')
+                      .zaloba-seria
+                        .punkt Дата
+                        input.datepicker(name='Complaints[date]', type='text')
+                      .zaloba-seria.zaloba-seria-mrg
+                        .punkt Город
+                        input(name='Complaints[city]', type='text')
+                      .zaloba-seria.zaloba-seria-nl
+                        .vid-dostavka Вид товара
+                        input.inp-dostavka(name='Complaints[delivery]', type='text')
+                    .zaloba-seria.zaloba-seria-rt.complaint-switch.complaint-ib
+                      span.styled-checkbox
+                        input#blagod-chk(name='vehicle', type='checkbox')
+                      span(style='margin:0px;position:relative;top:-2px;') Я не знаю серию и номер
+                  .zaloba-text
+                    textarea(cols='30', name='Complaints[content]', rows='3')
+                  .zaloba-chec
+                    input.btn(type='submit', value='Отправить')

@@ -1,0 +1,224 @@
+.c-popup {
+  display: none;
+
+  input[type="text"] {
+    vertical-align: top;
+    margin-left: 9px;
+    margin-top: 7px;
+    padding: 11px;
+    font-size: 14px;
+    background: white;
+    border: 1px solid #d7d6d4;
+  }
+  .modal {
+    overflow-y: auto !important;
+  }
+  .modal {
+    border-radius: 0;
+    width: 680px;
+    margin: auto;
+  }
+  .js-form.courierjs-form input {
+    font-family: Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .zaloba-seria {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .zaloba-seria.zaloba-seria-nl {
+    display: block;
+  }
+  .js-form.courierjs-form .zaloba-seria.zaloba-seria-nl input {
+    margin-top: 3px;
+    margin-left: 5px;
+    width: 208px;
+  }
+  .zaloba-seria .punkt {
+    background: url(http://vozim.by/wp-content/uploads/sprite.png) -574px 0 no-repeat scroll rgba(0, 0, 0, 0);
+  }
+  .zaloba,
+  #blagod {
+    width: 584px;
+    padding: 15px;
+  }
+  .zaloba-seria.zaloba-seria-rt {
+    float: right;
+    margin-top: 25px;
+    margin-right: 20px;
+  }
+  .zaloba-seria.zaloba-seria-mrg {
+    margin-left: 10px;
+  }
+  .punkt {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    color: white;
+    padding-top: 24px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 3px;
+  }
+  .js-form .zaloba-seria input[type="text"] {
+    display: inline-block;
+    height: 29px;
+    margin-top: 10px;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+    padding: 9px 11px;
+    width: 84px;
+  }
+  .zaloba-chec {
+    margin-top: 21px;
+    font-size: 14px;
+  }
+  .zaloba-chec input {
+    margin-top: 3px;
+    vertical-align: top;
+  }
+  .zaloba-text {
+    padding-left: 65px;
+    background: url(http://vozim.by/wp-content/uploads/sprite.png) -575px -65px no-repeat scroll rgba(0, 0, 0, 0);
+    margin-bottom: 10px;
+  }
+  .zaloba-text textarea {
+    resize: none;
+    width: 474px;
+    height: 123px;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+    padding: 8px 16px;
+  }
+  .complaint-info .complaint-ib {
+    float: left;
+  }
+  .complaint-info .complaint-ib.complaint-switch {
+    float: right;
+  }
+  .vid-dostavka {
+    background-color: #0096d2;
+    padding: 15px;
+    border: 5px solid #addbed;
+    float: left;
+    color: #fff;
+    font-size: 15px;
+  }
+  .inp-dostavka {
+    width: 410px;
+  }
+  .btn {
+    outline: none;
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/btn.png) 0 -78px no-repeat;
+    padding: 0;
+    border: 0 none;
+    display: inline-block;
+    height: 38px;
+    width: 135px;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+  }
+  .btn:hover {
+    background-position: 0 -39px;
+  }
+  .btn:active {
+    background-position: 0 0;
+  }
+  .modal .modal-content {
+    border-radius: 0;
+  }
+  .modal .modal-dialog.opinions {
+    width: 660px;
+  }
+  .modal .modal-dialog.with_close .modal-content::after {
+    content: "";
+    background: url(http://vozim.by/wp-content/uploads/sprite.png) -330px -72px repeat scroll rgba(0, 0, 0, 0);
+    border: 0;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    right: -2px;
+  }
+  .modal .modal-dialog.with_close .close {
+    position: absolute;
+    top: 1px;
+    right: 7px;
+    color: white;
+    font-weight: bold;
+    z-index: 9;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .modal .modal-body {
+    background-image: url(http://vozim.by/wp-content/themes/vozim/css/../images/bg-pattern.png);
+    padding: 14px;
+  }
+  .modal .opinions .modal-body {
+    padding: 14px 19px;
+  }
+  .modal .opinions .nav.nav-tabs {
+    margin-top: 6px;
+    border: 0;
+  }
+  .modal .opinions .nav.nav-tabs li,
+  .modal .opinions .nav.nav-tabs li a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 12px;
+    border-radius: 0;
+    color: black;
+  }
+  .modal .opinions .nav.nav-tabs li a {
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/courier.btn.png) 0 -55px no-repeat;
+    width: 148px;
+    height: 31px;
+    padding-top: 15px;
+    text-align: center;
+  }
+  .modal .opinions .nav.nav-tabs li a {
+    position: relative;
+    bottom: -6px;
+  }
+  .modal .opinions .nav.nav-tabs li.active a {
+    background-position: 0 0;
+    width: 187px;
+    height: 32px;
+    padding-top: 20px;
+    bottom: -1px;
+    color: #428bca;
+  }
+  .modal .opinions .tab-content {
+    background: #f8f8f8;
+    border: 1px solid #cfcfcf;
+    margin-bottom: 2px;
+    padding-bottom: 8px;
+  }
+  .js-form .btn {
+    font-weight: normal;
+    font-family: Calibri, Tahoma, sans-serif;
+  }
+  .js-form input[type="text"] {
+    border: 1px solid #d9d8d6;
+    padding: 3px;
+    margin-left: 0;
+    border-radius: 0;
+  }
+  .js-form input:hover {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .js-form .styled-checkbox {
+    width: 15px;
+    height: 13px;
+    display: inline-block;
+    cursor: pointer;
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/checkbox.png) 0 0 no-repeat;
+  }
+  .js-form .styled-checkbox input {
+    display: none;
+  }
+}
