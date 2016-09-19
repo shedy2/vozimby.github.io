@@ -2,10 +2,7 @@
   width: 1200px;
   margin: 76px auto 94px;
   position: relative;
-
-  .clear {
-    clear: both;
-  }
+  overflow: hidden;
 
   .icon {
     display: inline-block;

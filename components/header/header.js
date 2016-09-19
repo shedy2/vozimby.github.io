@@ -31,4 +31,4 @@ window.app.registerComponent('header', function($) {
       });
     }
   };
-})
+});

@@ -6,8 +6,6 @@ window.app.registerComponent('hero', function($) {
         animation: false
       });
 
-      // DEV ONLY
-      return;
       this.animateClouds();
     },
 
@@ -110,5 +108,5 @@ window.app.registerComponent('hero', function($) {
         }, 'linear');
       }, 0)
     }
-  }
-})
+  };
+});

@@ -3,6 +3,7 @@
     h2.bhead Проверить <br> состояние доставки
   form#rstatus.js-form(method='post', action='/api.php')
     input(name='form', value='rstatus', type='hidden')
+      
     .jsform-body
       .control-group.first.clearfix
         .labels
@@ -14,8 +15,10 @@
           label(for='rst-number') Номер
         .controls
           input#rst-number(name='number', required='required', type='text')
+            
     .jsform-submit
       input.g-button(value='Проверить', type='submit')
+        
     .jsform-result
       #rstatus-result
         .rstatus-res.hidden.clearfix.delivery
