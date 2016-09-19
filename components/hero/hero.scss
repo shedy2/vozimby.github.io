@@ -91,6 +91,73 @@
     top: 28px;
   }
 
+  .map_hint .tooltip {
+    opacity: 1 !important;
+  }
+
+  .map_hint .tooltip .tooltip-inner {
+    border-radius: 2px;
+    background: white;
+    color: #333333;
+    font-size: 12px;
+    text-align: left;
+    padding: 12px 13px 10px;
+    line-height: 14px;
+    box-shadow: 0px 0px 8px 2px #888888;
+    width: 174px;
+  }
+
+  .map_hint .tooltip.top {
+    margin-top: -9px;
+    margin-left: 2px;
+  }
+
+  .map_hint .tooltip.top .tooltip-arrow {
+    bottom: -3px;
+    left: 50%;
+    margin-left: -12px;
+    border-width: 8px 8px 0;
+    border-top-color: white;
+  }
+
+  .icon {
+    display: inline-block;
+    background: url(static/images/common-sprite.png) 0 0 no-repeat;
+  }
+
+  .icon.icon-wbtown {
+    background-position: -654px -195px;
+    width: 19px;
+    height: 18px;
+  }
+  .icon.icon-wbtime {
+    background-position: -654px -214px;
+    width: 20px;
+    height: 20px;
+  }
+  .icon.icon-wbsklad {
+    background-position: -654px -234px;
+    width: 19px;
+    height: 14px;
+  }
+
+  .popline {
+    font-size: 12px;
+  }
+
+  .popline .address-line {
+    margin-left: 24px;
+  }
+
+  .popline .time-line {
+    margin-left: 24px;
+    margin-bottom: 12px;
+  }
+
+  .popline .time-line .icon {
+    margin-bottom: -5px;
+  }
+
   .cloud_l {
     background-repeat: no-repeat;
     height: 270px;

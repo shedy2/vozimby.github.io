@@ -1,6 +1,11 @@
 window.app.registerComponent('hero', function($) {
   return {
     init: function() {
+      $('.map_hint a').tooltip({
+        html: true,
+        animation: false
+      });
+
       // DEV ONLY
       return;
       this.animateClouds();

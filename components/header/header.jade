@@ -21,14 +21,11 @@
           a.soc_btn.soc_btn-vk(href='http://vk.com/vozimby', target='_blank')
             .vk
               
-          a.soc_btn.soc_btn-mail
+          a.soc_btn(data-toggle='tooltip', data-placement='bottom', title='', data-original-title="<ul style='margin:0px;padding:0px;list-style-type:none;'><li><i style='margin-bottom:-2px;' class='icon icon-bmail'></i> <a href='/cdn-cgi/l/email-protection#2e4c4b424f5c5b5d6e5841544743004c57'><span class='__cf_email__' data-cfemail='9cfef9f0fdeee9efdceaf3e6f5f1b2fee5'>belarus@vozim.by</span><script cf-hash='f9e31' type='text/javascript'>/* <![CDATA[ */!function(){try{var t='currentScript'in document?document.currentScript:function(){for(var t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('cf-hash'))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute('data-cfemail');if(a){for(e='',r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script></a></li></ul>")
             .email
-              
-          a.soc_btn.soc_btn-skype
+                
+          a.soc_btn(data-toggle='tooltip', data-placement='bottom', title='', data-original-title="<ul id='popup-skype'><li>Из Минска по РБ:</br><i class='icon icon-bskype'></i> <a href=skype:belarus.vozim.by?chat>belarus.vozim.by</a></li><li>Из других городов по РБ:</br><i class='icon icon-bskype'></i> <a href=skype:belarus2.vozim.by?chat>porb.vozim.by</a></li></ul>")
             .skype
-              
-          include ../tooltip/tooltip-skype
-          include ../tooltip/tooltip-mail
-              
+
         button#opinions-toggle.consult(data-toggle='modal' href='#opinions') Отзыв о курьере
         .work-pay Мы принимаем:
