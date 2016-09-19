@@ -3,18 +3,7 @@
   .columns.clearfix
     
     .column.column-citychecker
-      .bhead-wrapper.fix
-        h2.bhead Cписок основных городов
-      form#citychecker.js-form(method='post', action='/api.php')
-        input(name='form', value='citychecker', type='hidden')
-        .jsform-body
-          | Введите нужный город, чтобы узнать в какие дни осуществляется доставка.
-          .control-group.only-control.last.noborder.clearfix
-            input#checkcityinp(name='cityname', autocomplete='off', placeholder='      Введите нужный город', type='text')
-        .jsform-submit
-          input.btn(value='Узнать', type='submit')
-        .jsform-result
-          #citychecker-result
+      include ../city-checker/city-checker
             
     .column.column-calculator
       .bhead-wrapper.fix

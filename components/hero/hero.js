@@ -1,6 +1,8 @@
 window.app.registerComponent('hero', function($) {
   return {
     init: function() {
+      // DEV ONLY
+      return;
       this.animateClouds();
     },
 

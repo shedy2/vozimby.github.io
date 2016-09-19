@@ -1,0 +1,13 @@
+.c-city-checker
+  .bhead-wrapper.fix
+    h2.bhead Cписок основных городов
+  form#citychecker.js-form(method='post', action='/api.php')
+    input(type='hidden', name='form', value='citychecker')
+    .jsform-body
+      | Введите нужный город, чтобы узнать в какие дни осуществляется доставка.
+      .control-group.only-control.last.noborder.clearfix
+        input#checkcityinp(type='text', name='cityname', autocomplete='off', placeholder='Введите нужный город')
+    .jsform-submit
+      input.btn(type='submit', value='Узнать')
+    .jsform-result
+      #citychecker-result
