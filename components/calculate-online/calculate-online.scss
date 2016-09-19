@@ -56,7 +56,11 @@
     font-style: italic;
   }
 
-  .c-price-checker .js-form .jsform-result {
+  .js-form .jsform-result {
     height: 110px;
+  }
+
+  .c-city-checker .jsform-submit {
+    padding-right: 0;
   }
 }

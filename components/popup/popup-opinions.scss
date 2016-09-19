@@ -157,7 +157,7 @@
     text-decoration: none;
   }
   .modal-body {
-    background-image: url(http://vozim.by/wp-content/themes/vozim/css/../images/bg-pattern.png);
+    background-image: url(static/images/common-background.png);
     padding: 14px;
   }
   .opinions .modal-body {
@@ -178,7 +178,7 @@
     color: black;
   }
   .opinions .nav.nav-tabs li a {
-    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/courier.btn.png) 0 -55px no-repeat;
+    background: url(static/images/popup-opinions-tab-background.png) 0 -55px no-repeat;
     width: 148px;
     height: 31px;
     padding-top: 15px;
