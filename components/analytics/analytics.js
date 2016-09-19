@@ -1,4 +1,4 @@
-window.app.registerComponent('analitycs', function($) {
+window.app.registerComponent('analytics', function($) {
   return {
     init: function() {},
 

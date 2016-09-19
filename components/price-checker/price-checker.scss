@@ -1,0 +1,132 @@
+.c-price-checker {
+  .tip {
+    line-height: 30px;
+    font-size: 13px;
+    color: #0090c9;
+    cursor: pointer;
+  }
+  .labels {
+    width: 160px;
+  }
+  .nomargin {
+    margin-top: 0 !important;
+  }
+  .controls {
+    width: 270px;
+    margin-top: -2px;
+  }
+  .styled-select {
+    width: 245px;
+  }
+  .styled-select select {
+    width: 260px;
+  }
+  .jsform-submit {
+    padding-right: 23px;
+  }
+  .control-group-dimension {
+    padding-top: 0;
+  }
+  .control-group-dimension .labels,
+  .control-group-dimension .controls {
+    float: none;
+    width: 100%;
+  }
+  .control-group-dimension .labels {
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+  .control-group-dimension .labels label {
+    text-transform: uppercase;
+  }
+  .control-group-cost input {
+    margin-top: 0;
+    width: 240px;
+  }
+  .controls-fromstore {
+    margin: 8px 0 0 159px;
+    height: 30px;
+  }
+  .control-group-locality .labels {
+    width: 128px;
+  }
+  .control-group-locality .controls {
+    width: 298px;
+  }
+  .control-group-locality input {
+    width: 238px;
+  }
+  .control-group-locality .tip,
+  .control-group-locality .watch-on-map,
+  .control-group-locality span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .control-group-locality span {
+    margin-left: 5px;
+  }
+  .watch-on-map {
+    text-decoration: none;
+  }
+  .watch-on-map .map35 {
+    fill: #dadada;
+  }
+  .control-group-additional .tip {
+    line-height: 34px;
+  }
+  .inp-group {
+    float: left;
+    width: 120px;
+    margin-right: 20px;
+  }
+  .inp-group.last {
+    margin-right: 0;
+  }
+  .lbl {
+    line-height: 29px;
+  }
+  .lbl-before {
+    padding-right: 14px;
+  }
+  .lbl-after {
+    padding-left: 5px;
+  }
+  .inp-group .lbl {
+    padding-left: 4px;
+  }
+  #clc-dimension input {
+    width: 73px;
+    margin: 0;
+    text-align: center;
+  }
+  #clc-result {
+    font-size: 18px;
+    margin-top: 18px;
+    white-space: nowrap;
+  }
+  .noresult {
+    color: #00b5e1;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 23px;
+  }
+  .js-form input.filled {
+    border: 1px solid #009ad8;
+  }
+  .tooltip .tooltip-inner {
+    border-radius: 2px;
+    background: white;
+    color: #333333;
+    font-size: 12px;
+    text-align: left;
+    text-transform: none;
+    padding: 12px 13px 10px;
+    line-height: 13px;
+    box-shadow: 0 0 8px 2px #888888;
+    width: 240px;
+  }
+  .tooltip.right .tooltip-arrow {
+    border-right-color: white;
+  }
+}

@@ -24,7 +24,7 @@ window.app.registerComponent('city-checker', function($) {
       event.preventDefault();
 
       $('#citychecker-result').text('ищем ...');
-      window.app.analitycs.reachGoal('SpisokGorodov');
+      window.app.analytics.reachGoal('SpisokGorodov');
 
       var search = function(where, what) {
         var st = what.replace('.', '\\.').replace('(', '\\(').replace(')', '\\)');
