@@ -1,0 +1,46 @@
+.c-status-checker {
+  #rstatus input[type="text"] {
+    width: 75px;
+    margin: 0;
+  }
+  #rstatus .jsform-submit {
+    padding-right: 35px;
+  }
+  #rstatus .labels {
+    width: 122px;
+  }
+  #rstatus .controls {
+    width: 118px;
+    min-height: 30px;
+  }
+  .icon-status {
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/status.list.png) 0 0 no-repeat;
+    width: 105px;
+    height: 88px;
+  }
+  .rstatus-res {
+    color: #0199da;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 25px;
+  }
+  .delivery .icon-status {
+    background-position: 0 -171px;
+  }
+  .planed .icon-status {
+    background-position: 0 -98px;
+    height: 68px;
+  }
+  .return .icon-status {
+    background-position: 0 0;
+    height: 95px;
+  }
+  .delivered .icon-status {
+    background-position: 0 -262px;
+  }
+  .process {
+    font-size: 14px;
+  }
+}

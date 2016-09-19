@@ -1,0 +1,36 @@
+.c-status-checker
+  .bhead-wrapper
+    h2.bhead
+      | Проверить <br> состояние доставки
+  form#rstatus.js-form(method='post', action='/api.php')
+    input(name='form', value='rstatus', type='hidden')
+    .jsform-body
+      .control-group.first.clearfix
+        .labels
+          label(for='rst-series') Серия
+        .controls
+          input#rst-series(name='series', required='required', type='text')
+      .control-group.last.clearfix
+        .labels
+          label(for='rst-number') Номер
+        .controls
+          input#rst-number(name='number', required='required', type='text')
+    .jsform-submit
+      input.btn(value='Проверить', type='submit')
+    .jsform-result
+      #rstatus-result
+        .rstatus-res.hidden.clearfix.delivery
+          i.icon.icon-status
+          div Доставляется
+        .rstatus-res.hidden.clearfix.return
+          i.icon.icon-status
+          div Возврат
+        .rstatus-res.hidden.clearfix.planed
+          i.icon.icon-status
+          div(style='color:#7ad0f1;') Доставка на
+        .rstatus-res.hidden.clearfix.delivered
+          i.icon.icon-status
+          div Доставлено
+        .rstatus-res.clearfix.hidden.process
+          i.icon.icon-status
+          div Заказ на складе. <br> Тарифный план Эксрпресс <br> Доставка в течении 2х дней
