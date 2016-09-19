@@ -1,20 +1,77 @@
 .c-status-checker {
-  #rstatus input[type="text"] {
+  .bhead-wrapper {
+    height: 48px;
+  }
+  .bhead-wrapper .bhead {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding-bottom: 5px;
+  }
+  .jsform-body {
+    min-height: 231px;
+    padding-top: 22px;
+    border-top: 1px solid #939393;
+  }
+  .jsform-submit {
+    border-bottom: 1px solid #939393;
+    padding-bottom: 6px;
+    padding-right: 23px;
+    text-align: right;
+  }
+  .jsform-result {
+    height: 169px;
+  }
+  .controls,
+  .js-form .labels {
+    float: left;
+  }
+  .control-group {
+    border-bottom: 1px dashed #c2c2c2;
+    padding: 15px 0;
+  }
+  .control-group.first {
+    padding-top: 0;
+  }
+  .control-group.last {
+    border-bottom: none;
+  }
+  .btn {
+    font-weight: normal;
+    font-family: Calibri, Tahoma, sans-serif;
+  }
+  input[type="text"] {
+    border: 1px solid #d9d8d6;
+    padding: 3px;
+    margin-left: 0;
+    border-radius: 0;
+  }
+  input:hover {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .labels {
+    margin-top: 2px;
+  }
+  input[type="text"] {
     width: 75px;
     margin: 0;
   }
-  #rstatus .jsform-submit {
+  .jsform-submit {
     padding-right: 35px;
   }
-  #rstatus .labels {
+  .labels {
     width: 122px;
   }
-  #rstatus .controls {
+  .controls {
     width: 118px;
     min-height: 30px;
   }
   .icon-status {
-    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/status.list.png) 0 0 no-repeat;
+    display: inline-block;
+    background: url(static/images/status-checker-icons.png) 0 0 no-repeat;
     width: 105px;
     height: 88px;
   }
@@ -42,5 +99,8 @@
   }
   .process {
     font-size: 14px;
+  }
+  .g-button {
+    font-weight: normal;
   }
 }

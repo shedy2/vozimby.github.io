@@ -1,4 +1,90 @@
 .c-price-checker {
+
+  .bhead-wrapper {
+    height: 48px;
+  }
+  .bhead-wrapper .bhead {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding-bottom: 5px;
+  }
+  .bhead-wrapper.fix .bhead {
+    padding-top: 22px;
+  }
+  .jsform-body {
+    min-height: 231px;
+    padding-top: 22px;
+    border-top: 1px solid #939393;
+  }
+  .jsform-submit {
+    border-bottom: 1px solid #939393;
+    padding-bottom: 6px;
+    padding-right: 23px;
+    text-align: right;
+  }
+  .jsform-result {
+    height: 169px;
+  }
+  .controls,
+  .js-form .labels {
+    float: left;
+  }
+  .control-group {
+    border-bottom: 1px dashed #c2c2c2;
+    padding: 15px 0;
+  }
+  .control-group.first {
+    padding-top: 0;
+  }
+  .control-group.last {
+    border-bottom: none;
+  }
+  .btn {
+    font-weight: normal;
+    font-family: Calibri, Tahoma, sans-serif;
+  }
+  input[type="text"] {
+    border: 1px solid #d9d8d6;
+    padding: 3px;
+    margin-left: 0;
+    border-radius: 0;
+  }
+  input:hover {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  input.filled,
+  .js-form .styled-select.filled {
+    border: 1px solid #009ad8;
+  }
+  .styled-select {
+    border: 1px solid #d9d8d6;
+    background: url(http://vozim.by/wp-content/themes/vozim/css/../images/select.arrow.png) right bottom no-repeat white;
+    width: 228px;
+    overflow: hidden;
+  }
+  .styled-select select {
+    width: 247px;
+    height: 29px;
+    padding: 5px;
+    background: transparent;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+  .styled-select select.dependent-sub {
+    border-top: 1px dotted #d9d8d6;
+  }
+  .columns .js-form .labels {
+    margin-top: 2px;
+  }
+  .typeahead.dropdown-menu {
+    width: auto;
+  }
   .tip {
     line-height: 30px;
     font-size: 13px;
@@ -9,7 +95,7 @@
     width: 160px;
   }
   .nomargin {
-    margin-top: 0 !important;
+    margin-top: 0;
   }
   .controls {
     width: 270px;
@@ -28,7 +114,7 @@
     padding-top: 0;
   }
   .control-group-dimension .labels,
-  .control-group-dimension .controls {
+  #calculation .control-group-dimension .controls {
     float: none;
     width: 100%;
   }
@@ -48,33 +134,6 @@
     margin: 8px 0 0 159px;
     height: 30px;
   }
-  .control-group-locality .labels {
-    width: 128px;
-  }
-  .control-group-locality .controls {
-    width: 298px;
-  }
-  .control-group-locality input {
-    width: 238px;
-  }
-  .control-group-locality .tip,
-  .control-group-locality .watch-on-map,
-  .control-group-locality span {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .control-group-locality span {
-    margin-left: 5px;
-  }
-  .watch-on-map {
-    text-decoration: none;
-  }
-  .watch-on-map .map35 {
-    fill: #dadada;
-  }
-  .control-group-additional .tip {
-    line-height: 34px;
-  }
   .inp-group {
     float: left;
     width: 120px;
@@ -93,26 +152,50 @@
     padding-left: 5px;
   }
   .inp-group .lbl {
-    padding-left: 4px;
+    padding-left: 8px;
   }
   #clc-dimension input {
     width: 73px;
     margin: 0;
     text-align: center;
   }
+  .control-group-locality .labels {
+    width: 128px;
+  }
+  .control-group-locality .controls {
+    width: 298px;
+  }
+  .control-group-locality input {
+    width: 238px;
+  }
+  .control-group-locality .tip {
+    margin-left: 5px;
+  }
+  .control-group-locality .tip,
+  .control-group-locality .watch-on-map,
+  .control-group-locality span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .watch-on-map {
+    text-decoration: none;
+  }
+  .watch-on-map .map35 {
+    fill: #dadada;
+  }
+  .watch-on-map.filled .map35 {
+    fill: #7ad0f1;
+  }
+  .watch-on-map.filled .map35:hover {
+    fill: #009fdc;
+  }
+  .control-group-additional .tip {
+    line-height: 34px;
+  }
   #clc-result {
     font-size: 18px;
     margin-top: 18px;
     white-space: nowrap;
-  }
-  .noresult {
-    color: #00b5e1;
-    text-transform: uppercase;
-    text-align: right;
-    margin-right: 23px;
-  }
-  .js-form input.filled {
-    border: 1px solid #009ad8;
   }
   .tooltip .tooltip-inner {
     border-radius: 2px;
@@ -128,5 +211,8 @@
   }
   .tooltip.right .tooltip-arrow {
     border-right-color: white;
+  }
+  .g-button {
+    font-weight: normal;
   }
 }

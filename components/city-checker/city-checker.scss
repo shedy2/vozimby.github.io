@@ -1,5 +1,53 @@
 .c-city-checker {
 
+  .bhead-wrapper {
+    height: 48px;
+  }
+  .bhead-wrapper .bhead {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding-bottom: 5px;
+  }
+  .bhead-wrapper.fix .bhead {
+    padding-top: 22px;
+  }
+  .bhead {
+    padding-left: 10px;
+  }
+  .jsform-body {
+    min-height: 231px;
+    padding-top: 22px;
+    border-top: 1px solid #939393;
+  }
+  .jsform-submit {
+    border-bottom: 1px solid #939393;
+    padding-bottom: 6px;
+    padding-right: 23px;
+    text-align: right;
+  }
+  .jsform-result {
+    height: 169px;
+  }
+  .control-group {
+    border-bottom: 1px dashed #c2c2c2;
+    padding: 15px 0;
+  }
+  .control-group.last {
+    border-bottom: none;
+  }
+  input[type="text"] {
+    border: 1px solid #d9d8d6;
+    padding: 3px;
+    margin-left: 0;
+    border-radius: 0;
+  }
+  input:hover {
+    box-shadow: none;
+    border-radius: 0;
+  }
   .jsform-body {
     padding-left: 9px;
   }
@@ -17,5 +65,8 @@
   }
   .jsform-submit {
     padding-right: 58px;
+  }
+  .g-button {
+    font-weight: normal;
   }
 }
