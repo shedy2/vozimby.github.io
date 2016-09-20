@@ -197,11 +197,6 @@
     margin-top: 18px;
     white-space: nowrap;
   }
-  #clc-result {
-    font-size: 18px;
-    margin-top: 18px;
-    white-space: nowrap;
-  }
   #clc-result span {
     display: inline-block;
     line-height: 28px;
@@ -262,5 +257,11 @@
   }
   .g-button {
     font-weight: normal;
+  }
+  .noresult {
+    color: #00b5e1;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 23px;
   }
 }
