@@ -20,7 +20,6 @@ window.app.registerComponent('storage', function($) {
       var q = {};
       q[name] = 1;
       that = this;
-      funct(resp)
 
       jQuery.get('/api.php', q, function(resp) {
         that.setCache(name, resp);
