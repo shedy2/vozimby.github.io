@@ -31,7 +31,7 @@ window.app.registerComponent('price-checker', function($) {
 
       var calculatorRoot = $('#calculation').first();
       if (calculatorRoot.size() == 0) return;
-      var calculatorMap = $('#calculator-map-modal').first();
+      var calculatorMap = jQuery('#calculator-map-modal').first();
 
       var formatMoney = function(n, c, d, t) {
         var c = isNaN(c = Math.abs(c)) ? 2 : c,

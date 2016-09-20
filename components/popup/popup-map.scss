@@ -1,0 +1,20 @@
+.c-popup-map {
+
+  .close {
+    position: absolute;
+    top: 1px;
+    right: 7px;
+    display: block;
+    color: #6b6b6b;
+    background: url(static/images/popup-close.png) 0 0 no-repeat;
+    width: 13px;
+    height: 16px;
+    margin-top: 7px;
+    color: white;
+    font-weight: bold;
+    z-index: 9;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
