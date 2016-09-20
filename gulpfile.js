@@ -4,10 +4,15 @@ var gulp         = require('gulp'),
     rename       = require('gulp-rename'),
     watch        = require('gulp-watch'),
     plumber      = require('gulp-plumber'),
-    gulpif       = require('gulp-if'),
     concat       = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
-    browserSync  = require('browser-sync')
+    browserSync  = require('browser-sync'),
+    csso         = require('gulp-csso'),
+    uglify       = require('gulp-uglify'),
+    rev          = require('gulp-rev'),
+    revReplace   = require('gulp-rev-replace'),
+    filter       = require('gulp-filter'),
+    clean        = require('gulp-clean')
 
 gulp.task('pages', function() {
   return gulp.src('pages/*.jade')
@@ -50,6 +55,33 @@ gulp.task('static', function() {
   return gulp.src('static/**')
     .pipe(gulp.dest('dist/static'))
     .pipe(browserSync.stream())
+})
+
+gulp.task('production', ['build'], function() {
+  var jsFilter = filter('dist/*.js', { restore: true })
+      cssFilter = filter('dist/*.css', { restore: true }),
+      jsAndCssFilter = filter(['dist/*.js', 'dist/*.css'], { restore: true })
+      staticFilter = filter('dist/static/**/*', { restore: true }),
+      staticAndStylesFilter = filter(['dist/static/**/*', 'dist/*.css'], { restore: true })
+
+  return gulp.src('dist/**/*')
+    .pipe(staticFilter)
+    .pipe(rev())
+    .pipe(staticFilter.restore)
+    .pipe(staticAndStylesFilter)
+    .pipe(revReplace())
+    .pipe(staticAndStylesFilter.restore)
+    .pipe(cssFilter)
+    .pipe(csso())
+    .pipe(cssFilter.restore)
+    .pipe(jsFilter)
+    .pipe(uglify())
+    .pipe(jsFilter.restore)
+    .pipe(jsAndCssFilter)
+    .pipe(rev())
+    .pipe(jsAndCssFilter.restore)
+    .pipe(revReplace())
+    .pipe(gulp.dest('production/'))
 })
 
 gulp.task('build', ['pages', 'styles', 'scripts', 'static'])
