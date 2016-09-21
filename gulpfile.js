@@ -62,9 +62,10 @@ gulp.task('production', ['build'], function() {
       cssFilter = filter('dist/*.css', { restore: true }),
       jsAndCssFilter = filter(['dist/*.js', 'dist/*.css'], { restore: true })
       staticFilter = filter('dist/static/**/*', { restore: true }),
-      staticAndStylesFilter = filter(['dist/static/**/*', 'dist/*.css'], { restore: true })
+      staticAndStylesFilter = filter(['dist/static/**/*', 'dist/*.css'], { restore: true }),
+      miscFilter = filter(['CNAME'], { restore: true })
 
-  return gulp.src('dist/**/*')
+  return gulp.src(['dist/**/*', 'CNAME'])
     .pipe(staticFilter)
     .pipe(rev())
     .pipe(staticFilter.restore)
@@ -81,6 +82,7 @@ gulp.task('production', ['build'], function() {
     .pipe(rev())
     .pipe(jsAndCssFilter.restore)
     .pipe(revReplace())
+    .pipe(miscFilter.restore)
     .pipe(gulp.dest('production/'))
 })
 
