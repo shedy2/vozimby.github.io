@@ -17,28 +17,32 @@ window.app.registerComponent('status-checker', function($) {
         return;
       }
 
-      $.get('/api.php', {
-        'form': 'rstatus',
+      window.app.storage
+      .apiPost('rstatus', {
         'series': series,
         'number': number
-      }, function(data) {
-        $('#rstatus-result .rstatus-res').addClass('hidden');
+      })
+      .done(function(data){
+        var rControl = $('#rstatus-result');
+        rControl.find('.rstatus-res').addClass('hidden');
         if (data.substr(0, 12) == 'Доставляется') {
-          $('#rstatus-result .delivery').removeClass('hidden');
-        }
-        if (data.substr(0, 8) == 'Заказ на') {
-          $('#rstatus-result .process div').html(data);
-          $('#rstatus-result .process').removeClass('hidden');
+          rControl.find('.delivery').removeClass('hidden');
+        } else if (data.substr(0, 8) == 'Заказ на') {
+          rControl.find('.process div').html(data);
+          rControl.find('.process').removeClass('hidden');
         } else if (data == 'Доставлено') {
-          $('#rstatus-result .delivered').removeClass('hidden');
+          rControl.find('.delivered').removeClass('hidden');
         } else if (data.substr(0, 8) == 'Доставка') {
-          $('#rstatus-result .planed div').html(data);
-          $('#rstatus-result .planed').removeClass('hidden');
+          rControl.find('.planed div').html(data);
+          rControl.find('.planed').removeClass('hidden');
         } else if (data == 'Возврат') {
-          $('#rstatus-result .return').removeClass('hidden');
+          rControl.find('.return').removeClass('hidden');
         } else {
           alert(data);
         }
+      })
+      .fail(function(){
+        alert('Проверка статуса заявки временно недоступна. Свяжитесь с нами по телефону или по почте.');
       });
     }
   };

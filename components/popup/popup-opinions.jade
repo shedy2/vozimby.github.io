@@ -12,7 +12,7 @@
               
           .tab-content
             #zaloba.zaloba.tab-pane
-              form#couriercomplain.js-form.courierjs-form(method='post', action='/api.php')
+              form#couriercomplain.js-form.courierjs-form(method='post', action='javascript:void(0);')
                 input#dont-chk(name='vehicle', type='checkbox', style='display: none')
                 input(type='hidden', name='form', value='courier')
                 input(type='hidden', name='Complaints[type]', value='0')
@@ -45,7 +45,7 @@
                   input.btn(type='submit', value='Отправить')
                     
             #blagod.tab-pane.active
-              form#courierinfo.js-form.courierjs-form(method='post', action='/api.php')
+              form#courierinfo.js-form.courierjs-form(method='post', action='javascript:void(0);')
                 input#blagod-chk(name='vehicle', type='checkbox', style='display: none')
                 input(type='hidden', name='form', value='courier')
                 input(type='hidden', name='Complaints[type]', value='1')

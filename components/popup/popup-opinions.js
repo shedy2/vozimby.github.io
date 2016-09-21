@@ -13,21 +13,40 @@ window.app.registerComponent('popup-opinions', function($) {
       });
     },
 
+    handleErrorMsg: function() {
+      alert('Что-то пошло не так. Свяжитесь с нами по телефону или по почте.');
+    },
+
+    handleError: function(resp) {
+      if (resp.responseJSON) {
+        for (var first in resp.responseJSON) break;
+        alert(resp.responseJSON[ first ][0]);
+      } else {
+        this.handleErrorMsg();
+      }
+    },
+
+    handleSuccess: function(formId, result) {
+      if (result && result=='success') {
+        $('.modal-content').find('.close').trigger('click');
+        alert(formId == 'courierinfo'
+          ? 'Спасибо! Ваша благодарность принята.'
+          : 'Спасибо! Ваша жалоба принята.');
+      } else {
+        this.handleErrorMsg();
+      }
+    },
+
     handleSubmit: function() {
+      var that = this;
       $('form').bind('submit', function(event) {
-        var parameters = $(event.target).serialize(),
-            errorMessage = 'Что-то пошло не так. Свяжитесь с нами по телефону или по почте.',
-            successMessage = $(event.target).attr('id') == 'courierinfo'
-              ? 'Спасибо! Ваша благодарность принята.'
-              : 'Спасибо! Ваша жалоба принята.';
-
-        $.get('/api.php', parameters, function(data) {
-          $(event.target).parents('.modal-content').find('.close').trigger('click');
-          alert(data == 'success' ? successMessage : errorMessage);
-        })
-
         event.preventDefault();
-      })
+        var formId = $(event.target).attr('id');
+        window.app.storage
+          .apiPost('review', $(event.target).serialize())
+          .done($.proxy(that.handleSuccess, that, formId))
+          .fail($.proxy(that.handleError, that));
+      });
     }
   }
 })

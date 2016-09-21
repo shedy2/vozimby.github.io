@@ -208,7 +208,7 @@ window.app.registerComponent('price-checker', function($) {
         });
       });
 
-      window.app.storage.get('locs', function(data) {
+      window.app.storage.get('location', function(data) {
         calculatorRoot.find('.clc-locality-input').typeahead({
           source: data,
           matcher: function(item) {
@@ -262,51 +262,61 @@ window.app.registerComponent('price-checker', function($) {
           setupCalculatorResult('Заполните все поля');
           return;
         }
-        setupCalculatorResult('Считаем, подождите...');
+
+        setupCalculatorResult('Считаем ...');
+
         window.app.analytics.reachGoal('Kalculator');
-        $.get('/api.php', calculatorRoot.serialize(), function(data) {
-          if (data === null || typeof data.body == 'undefined' || typeof data.status == 'undefined' || data.body === null || data.status != 'ok') {
-            setupCalculatorResult('На данный момент калькулятор недоступен');
-            return;
-          }
+
+        window.app.storage
+        .apiPost('calculator', calculatorRoot.serialize())
+        .done(function(resp){
           var keyBudget = 3;
           var keyStandart = 2;
           var keyExpress = 1;
+
           var keyMinimal = 'minimal';
           var keyCustom = 'custom';
           var clcResults = calculatorRoot.find('#clc-result').first();
-          if (data.body[keyCustom] && data.body[keyCustom].enabled) {
+
+          if (resp[keyCustom] && resp[keyCustom].enabled) {
             clcResults.html('<div class="exp clearfix">\
-    <span class="custominfo">Требуется индивидуальный расчет - пожалуйста свяжитесь с нами 6666-565</span> \
-    </div>');
+          <span class="custominfo">Требуется индивидуальный расчет - пожалуйста свяжитесь с нами 6666-565</span> \
+          </div>');
             return;
           }
-          if (data.body[keyMinimal] && data.body[keyMinimal].enabled) {
+
+          if (resp[keyMinimal] && resp[keyMinimal].enabled) {
             clcResults.html('<div class="exp clearfix">\
-    <span class="cost">от ' + formatBynCost(data.body[keyMinimal].cost) + '</span>\
-    <span class="mininfo">- узнать более 6666-565</span> \
-    </div>');
+          <span class="cost">от ' + formatBynCost(resp[keyMinimal].cost) + '</span>\
+          <span class="mininfo">- узнать более 6666-565</span> \
+          </div>');
             return;
           }
+
           var standartHtml = '';
-          if (data.body[keyStandart].enabled) {
+          if (resp[keyStandart].enabled) {
             standartHtml = '<div class="std clearfix">\
-    <span class="lbl">Стандарт</span>\
-    <span class="cost">' + formatBynCost(data.body[keyStandart].cost) + '</span>\
-    <span class="dates">' + formatClcDays(data.body[keyStandart].days) + '</span>\
-    </div>';
+          <span class="lbl">Стандарт</span>\
+          <span class="cost">' + formatBynCost(resp[keyStandart].cost) + '</span>\
+          <span class="dates">' + formatClcDays(resp[keyStandart].days) + '</span>\
+          </div>';
           }
+
           clcResults.html('<div class="exp clearfix">\
-    <span class="lbl">Экспресс</span>\
-    <span class="cost">' + formatBynCost(data.body[keyExpress].cost) + '</span>\
-    <span class="dates">' + formatClcDays(data.body[keyExpress].days) + '</span>\
-    </div>' +
+          <span class="lbl">Экспресс</span>\
+          <span class="cost">' + formatBynCost(resp[keyExpress].cost) + '</span>\
+          <span class="dates">' + formatClcDays(resp[keyExpress].days) + '</span>\
+          </div>' +
             standartHtml + '<div class="eco clearfix">\
-    <span class="lbl">Эконом</span>\
-    <span class="cost">' + formatBynCost(data.body[keyBudget].cost) + '</span>\
-    <span class="dates">' + formatClcDays(data.body[keyBudget].days) + '</span>\
-    </div>' + '<div class="inf"><span>Ближайшие дни доставки</span></div>');
-        }, 'json');
+          <span class="lbl">Эконом</span>\
+          <span class="cost">' + formatBynCost(resp[keyBudget].cost) + '</span>\
+          <span class="dates">' + formatClcDays(resp[keyBudget].days) + '</span>\
+          </div>' + '<div class="inf"><span>Ближайшие дни доставки</span></div>');
+          })
+          .fail(function(){
+            setupCalculatorResult('На данный момент калькулятор недоступен');
+            return;
+          });
       });
     }
   }

@@ -8,7 +8,7 @@ window.app.registerComponent('city-checker', function($) {
     prepareData: function() {
       document.availibleCities = [];
       document.availibleCitiesLabels = [];
-      window.app.storage.get('city', function(data) {
+      window.app.storage.get('schedule', function(data) {
         data.forEach(function(e) {
           document.availibleCities.push(e[0]);
           document.availibleCitiesLabels.push(e[1]);

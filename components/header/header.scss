@@ -118,6 +118,9 @@
     vertical-align: top;
     float: right;
     position: relative;
+    .tooltip {
+      opacity: 1;
+    }
   }
 
   .soc_btn {
