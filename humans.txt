@@ -1,0 +1,13 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    Developer: Grisha Pushkov
+
+    Developer: Novikov Bogdan
+    Site: hcbogdan.com, hcbogdan@gmail.com
+    Twitter: nov_bogdan
+    Location: Ukraine
+
+# TECHNOLOGY COLOPHON
+    HTML5, CSS3, jQuery

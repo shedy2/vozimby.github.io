@@ -1,11 +1,15 @@
-<!DOCTYPE html>
+<!DOCTYPE html(lang="ru")>
 <html>
   <head>
+    <meta charset="utf-8"/>
     <title>Доставка из Интернет-магазинов</title>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <link rel="shortcut icon" href="static/images/favicon-5dbc5eee63.ico" type="image/vnd.microsoft.icon">
-    <link rel="stylesheet" href="vendor-22a25c8eab.css">
-    <link rel="stylesheet" href="styles-f60e1eb770.css">
+    <link rel="shortcut icon" href="/static/images/favicon-5dbc5eee63.ico" type="image/vnd.microsoft.icon"/>
+    <link rel="stylesheet" href="/vendor-22a25c8eab.css"/>
+    <link rel="stylesheet" href="/styles-90c1c5516f.css"/>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="author" content="Служба доставки vozim.by"/>
+    <meta name="keywords" content="доставка по Беларуси, доставка по РБ, служба доставки по РБ"/>
+    <meta name="description" content="Служба доставки по Беларуси vozim.by - доставка в любой город, низкие цены, сжатые сроки. Курьерская служба доставки по РБ"/>
   </head>
   <body class="c-page-dostavka-iz-internet-magazinov">
     <div class="g-container">
@@ -80,14 +84,14 @@
                   <h2 class="bhead">Cписок основных городов</h2>
                 </div>
                 <form id="citychecker" method="post" action="javascript:void(0);" class="js-form">
-                  <input type="hidden" name="form" value="citychecker">
+                  <input type="hidden" name="form" value="citychecker"/>
                   <div class="jsform-body">Введите нужный город, чтобы узнать в какие дни осуществляется доставка.
                     <div class="control-group only-control last noborder clearfix">
-                      <input id="checkcityinp" type="text" name="cityname" autocomplete="off" placeholder="Введите нужный город">
+                      <input id="checkcityinp" type="text" name="cityname" autocomplete="off" placeholder="Введите нужный город"/>
                     </div>
                   </div>
                   <div class="jsform-submit">
-                    <input type="submit" value="Узнать" class="g-button">
+                    <input type="submit" value="Узнать" class="g-button"/>
                   </div>
                   <div class="jsform-result">
                     <div id="citychecker-result"></div>
@@ -101,7 +105,7 @@
                   <h2 class="bhead"><span>Узнать стоимость доставки</span></h2>
                 </div>
                 <form id="calculation" method="post" action="javascript:void(0);" class="js-form">
-                  <input type="hidden" name="form" value="calculation">
+                  <input type="hidden" name="form" value="calculation"/>
                   <div class="jsform-body">
                     <div class="control-group first control-group-sender clearfix">
                       <div class="labels">
@@ -150,17 +154,17 @@
                         <div id="clc-dimension">
                           <div class="clearfix">
                             <div class="inp-group">
-                              <input name="length" type="text" placeholder="  длина" autocomplete="off" class="digit-only"><span class="lbl">см.</span>
+                              <input name="length" type="text" placeholder="  длина" autocomplete="off" class="digit-only"/><span class="lbl">см.</span>
                             </div>
                             <div class="inp-group">
-                              <input name="width" type="text" placeholder="  ширина" autocomplete="off" class="nomargin digit-only"><span class="lbl">см.</span>
+                              <input name="width" type="text" placeholder="  ширина" autocomplete="off" class="nomargin digit-only"/><span class="lbl">см.</span>
                             </div>
                             <div class="inp-group last">
-                              <input name="height" type="text" placeholder="  высота" autocomplete="off" class="digit-only"><span class="lbl">см.</span>
+                              <input name="height" type="text" placeholder="  высота" autocomplete="off" class="digit-only"/><span class="lbl">см.</span>
                             </div>
                           </div>
                           <div style="margin-left:237px; margin-top:10px;"><span class="lbl lbl-before">Вес</span>
-                            <input name="weight" type="text" placeholder="0" autocomplete="off" class="nomargin digit-only"><span class="lbl lbl-after">кг.</span>
+                            <input name="weight" type="text" placeholder="0" autocomplete="off" class="nomargin digit-only"/><span class="lbl lbl-after">кг.</span>
                           </div>
                         </div>
                       </div>
@@ -170,26 +174,26 @@
                         <label for="clc-cost">Оценочная стоимость</label>
                       </div>
                       <div class="controls">
-                        <input id="clc-goodcost" name="good-cost" type="text" placeholder="бел. руб." class="nomargin numeric">
+                        <input id="clc-goodcost" name="good-cost" type="text" placeholder="бел. руб." class="nomargin numeric"/>
                       </div>
                     </div>
                     <div class="control-group control-group-locality control-group-localityfrom hidden clearfix">
                       <div class="labels">
                         <label for="clc-localityfrom">Откуда</label>
                       </div>
-                      <div class="controls"><a href="javascript:void(0);" class="watch-on-map"><img src="static/images/calculate-map-52b803a21a.svg" width="28" height="28" class="c-svg-replace map35"></a>
-                        <input id="clc-localityfrom" name="locality-from" type="text" placeholder="Город" autocomplete="off" class="nomargin clc-locality-input"><span data-toggle="tooltip" data-placement="right" data-original-title="Если вы не нашли в списке нужного вам населенного пункта, сообщите пожалуйста об          этом нашим менеджерам по общему номеру &lt;span style='color:#1BA1DC;'&gt;6666-565&lt;/span&gt; и мы с радостью          добавим его к списку обслуживаемых городов" class="tip">?</span>
+                      <div class="controls"><a href="javascript:void(0);" class="watch-on-map"><img src="static/images/calculate-map-52b803a21a.svg" width="28" height="28" class="c-svg-replace map35"/></a>
+                        <input id="clc-localityfrom" name="locality-from" type="text" placeholder="Город" autocomplete="off" class="nomargin clc-locality-input"/><span data-toggle="tooltip" data-placement="right" data-original-title="Если вы не нашли в списке нужного вам населенного пункта, сообщите пожалуйста об          этом нашим менеджерам по общему номеру &lt;span style='color:#1BA1DC;'&gt;6666-565&lt;/span&gt; и мы с радостью          добавим его к списку обслуживаемых городов" class="tip">?</span>
                       </div>
                       <div class="controls controls-fromstore hidden">
-                        <input id="clc-fromstore" type="checkbox" name="fromstore" checked="" value="1" data-label="Со склада vozim.by" class="prettyCheckable">
+                        <input id="clc-fromstore" type="checkbox" name="fromstore" checked="" value="1" data-label="Со склада vozim.by" class="prettyCheckable"/>
                       </div>
                     </div>
                     <div class="control-group control-group-locality control-group-localityto hidden clearfix">
                       <div class="labels">
                         <label for="clc-localityto">Куда</label>
                       </div>
-                      <div class="controls"><a href="javascript:void(0);" class="watch-on-map"><img src="static/images/calculate-map-52b803a21a.svg" width="28" height="28" class="c-svg-replace map35"></a>
-                        <input id="clc-localityto" name="locality-to" type="text" placeholder="Город" autocomplete="off" class="nomargin clc-locality-input"><span data-toggle="tooltip" data-placement="right" data-original-title="Если вы не нашли в списке нужного вам населенного пункта, сообщите пожалуйста об          этом нашим менеджерам по общему номеру &lt;span style='color:#1BA1DC;'&gt;6666-565&lt;/span&gt; и мы с радостью          добавим его к списку обслуживаемых городов" class="tip">?</span>
+                      <div class="controls"><a href="javascript:void(0);" class="watch-on-map"><img src="static/images/calculate-map-52b803a21a.svg" width="28" height="28" class="c-svg-replace map35"/></a>
+                        <input id="clc-localityto" name="locality-to" type="text" placeholder="Город" autocomplete="off" class="nomargin clc-locality-input"/><span data-toggle="tooltip" data-placement="right" data-original-title="Если вы не нашли в списке нужного вам населенного пункта, сообщите пожалуйста об          этом нашим менеджерам по общему номеру &lt;span style='color:#1BA1DC;'&gt;6666-565&lt;/span&gt; и мы с радостью          добавим его к списку обслуживаемых городов" class="tip">?</span>
                       </div>
                     </div>
                     <div class="control-group control-group-additional last hidden clearfix">
@@ -197,13 +201,13 @@
                       <div class="controls">
                         <div class="clearfix">
                           <div class="column">
-                            <input id="clc-delivery18" type="checkbox" name="delivery18" value="1" data-label="Доставка до 18:00" class="prettyCheckable">
+                            <input id="clc-delivery18" type="checkbox" name="delivery18" value="1" data-label="Доставка до 18:00" class="prettyCheckable"/>
                           </div>
                           <div class="column"><span data-toggle="tooltip" data-placement="right" data-original-title="&lt;div&gt;Стандартное время доставки товаров и грузов с 8:30 до 21:00&lt;/div&gt;              &lt;div&gt;Данная услуга позволяет сократить время доставки до 18:00&lt;/div&gt;              &lt;br/&gt;              &lt;div&gt;Стоимость &lt;span style='color:#1BA1DC;'&gt;20 000&lt;/span&gt;&lt;/div&gt;" class="tip">?</span></div>
                         </div>
                         <div class="clearfix">
                           <div class="column">
-                            <input id="clc-driver-help" type="checkbox" name="driver-help" value="1" data-label="Помощь водителя" class="prettyCheckable">
+                            <input id="clc-driver-help" type="checkbox" name="driver-help" value="1" data-label="Помощь водителя" class="prettyCheckable"/>
                           </div>
                           <div class="column"><span data-toggle="tooltip" data-placement="right" data-original-title="&lt;div&gt;Товары весом до 15 кг.              доставляться курьером до Дверей клиента,свыше 15 кг. до подъезда.&lt;/div&gt;              &lt;div&gt;Услуга &lt;span style='color:#1BA1DC;'&gt;помощь водителя&lt;/span&gt;              подразумевает помощь нашего сотрудника в перемещении груза до              квартиры получателя в том числе и на нужный ему этаж.&lt;/div&gt;&lt;br/&gt;              &lt;div&gt;Стоимость &lt;span style='color:#1BA1DC;'&gt;40 000&lt;/span&gt;&lt;/div&gt;" class="tip">?</span></div>
                         </div>
@@ -211,7 +215,7 @@
                     </div>
                   </div>
                   <div class="jsform-submit">
-                    <input type="submit" value="Посчитать" class="g-button">
+                    <input type="submit" value="Посчитать" class="g-button"/>
                   </div>
                   <div class="jsform-result">
                     <div id="clc-result"></div>
@@ -231,30 +235,30 @@
           <div class="footer_col">
             <ul>
               <li><a href="/">Доставка по РБ</a></li>
-              <hr>
+              <hr/>
               <li><a href="/dostavka-po-gorodu-minsku/">Доставка по Минску</a></li>
-              <hr>
+              <hr/>
             </ul>
           </div>
           <div class="footer_col">
             <ul>
               <li><a target="_blank" href="https://vozi.by/">Грузоперевозки</a></li>
-              <hr>
+              <hr/>
               <li><a target="_blank" href="https://vozi.by/uri/lx5nTG">Пассажирские перевозки</a>
-                <hr>
+                <hr/>
               </li>
             </ul>
           </div>
           <div class="footer_col">
             <ul>
               <li><a href="job.html">Работа у нас</a></li>
-              <hr>
+              <hr/>
               <li><a data-target="#governance" data-toggle="modal">Связаться с руководством</a></li>
-              <hr>
+              <hr/>
             </ul>
           </div>
           <div style="margin-top:19px;" class="footer_col last">
-            <div class="footer_col_head">Мы принимаем:</div><img src="static/images/footer-pay-logo-6a50a6d489.jpg" alt="принимаем к оплате" width="179" height="71">
+            <div class="footer_col_head">Мы принимаем:</div><img src="static/images/footer-pay-logo-6a50a6d489.jpg" alt="принимаем к оплате" width="179" height="71"/>
           </div>
         </div>
       </div>
@@ -271,32 +275,32 @@
               <div class="tab-content">
                 <div id="zaloba" class="zaloba tab-pane">
                   <form id="couriercomplain" method="post" action="javascript:void(0);" class="js-form courierjs-form">
-                    <input id="dont-chk" name="vehicle" type="checkbox" style="display: none">
-                    <input type="hidden" name="form" value="courier">
-                    <input type="hidden" name="Complaints[type]" value="0">
+                    <input id="dont-chk" name="vehicle" type="checkbox" style="display: none"/>
+                    <input type="hidden" name="form" value="courier"/>
+                    <input type="hidden" name="Complaints[type]" value="0"/>
                     <div class="complaint-info clearfix">
                       <div class="now by-passport complaint-ib clearfix">
                         <div class="zaloba-seria">
                           <div class="punkt">Серия</div>
-                          <input name="Complaints[series]" type="text">
+                          <input name="Complaints[series]" type="text"/>
                         </div>
                         <div class="zaloba-seria zaloba-seria-mrg">
                           <div class="punkt">Номер</div>
-                          <input name="Complaints[number]" type="text">
+                          <input name="Complaints[number]" type="text"/>
                         </div>
                       </div>
                       <div style="width:380px;display:none;" class="dont-now by-details complaint-ib clearfix">
                         <div class="zaloba-seria">
                           <div class="punkt">Дата</div>
-                          <input name="Complaints[date]" type="text" class="datepicker">
+                          <input name="Complaints[date]" type="text" class="datepicker"/>
                         </div>
                         <div class="zaloba-seria zaloba-seria-mrg">
                           <div class="punkt">Город</div>
-                          <input name="Complaints[city]" type="text">
+                          <input name="Complaints[city]" type="text"/>
                         </div>
                         <div class="zaloba-seria zaloba-seria-nl">
                           <div class="vid-dostavka">Вид товара</div>
-                          <input name="Complaints[delivery]" type="text" class="inp-dostavka">
+                          <input name="Complaints[delivery]" type="text" class="inp-dostavka"/>
                         </div>
                       </div>
                       <div class="zaloba-seria zaloba-seria-rt complaint-switch complaint-ib">
@@ -307,38 +311,38 @@
                       <textarea cols="30" name="Complaints[content]" rows="3"></textarea>
                     </div>
                     <div class="zaloba-chec">
-                      <input type="submit" value="Отправить" class="btn">
+                      <input type="submit" value="Отправить" class="btn"/>
                     </div>
                   </form>
                 </div>
                 <div id="blagod" class="tab-pane active">
                   <form id="courierinfo" method="post" action="javascript:void(0);" class="js-form courierjs-form">
-                    <input id="blagod-chk" name="vehicle" type="checkbox" style="display: none">
-                    <input type="hidden" name="form" value="courier">
-                    <input type="hidden" name="Complaints[type]" value="1">
+                    <input id="blagod-chk" name="vehicle" type="checkbox" style="display: none"/>
+                    <input type="hidden" name="form" value="courier"/>
+                    <input type="hidden" name="Complaints[type]" value="1"/>
                     <div class="complaint-info clearfix">
                       <div class="blagod-now by-passport complaint-ib clearfix">
                         <div class="zaloba-seria">
                           <div class="punkt">Серия</div>
-                          <input name="Complaints[series]" type="text">
+                          <input name="Complaints[series]" type="text"/>
                         </div>
                         <div class="zaloba-seria zaloba-seria-mrg">
                           <div class="punkt">Номер</div>
-                          <input name="Complaints[number]" type="text">
+                          <input name="Complaints[number]" type="text"/>
                         </div>
                       </div>
                       <div style="width:380px;display:none;" class="blagod-not-now by-details complaint-ib clearfix">
                         <div class="zaloba-seria">
                           <div class="punkt">Дата</div>
-                          <input name="Complaints[date]" type="text" class="datepicker">
+                          <input name="Complaints[date]" type="text" class="datepicker"/>
                         </div>
                         <div class="zaloba-seria zaloba-seria-mrg">
                           <div class="punkt">Город</div>
-                          <input name="Complaints[city]" type="text">
+                          <input name="Complaints[city]" type="text"/>
                         </div>
                         <div class="zaloba-seria zaloba-seria-nl">
                           <div class="vid-dostavka">Вид товара</div>
-                          <input name="Complaints[delivery]" type="text" class="inp-dostavka">
+                          <input name="Complaints[delivery]" type="text" class="inp-dostavka"/>
                         </div>
                       </div>
                       <div class="zaloba-seria zaloba-seria-rt complaint-switch complaint-ib">
@@ -349,7 +353,7 @@
                       <textarea cols="30" name="Complaints[content]" rows="3"></textarea>
                     </div>
                     <div class="zaloba-chec">
-                      <input type="submit" value="Отправить" class="btn">
+                      <input type="submit" value="Отправить" class="btn"/>
                     </div>
                   </form>
                 </div>
@@ -389,7 +393,7 @@
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCHTJEYsjlRq6W6AWKeaZQFs6L3feYCMOc&amp;sensor=false&amp;ver=1"></script>
-    <script src="vendor-e0b9f2e883.js"></script>
-    <script src="scripts-55c66c7157.js"></script>
+    <script src="/vendor-e0b9f2e883.js"></script>
+    <script src="/scripts-b277d87d3f.js"></script>
   </body>
 </html>
