@@ -2,15 +2,21 @@ block variables
   - var page
   - var title
 
-doctype html
+doctype html(lang="ru")
 html
   head
+    meta(charset="utf-8")
     title= title
-    meta(http-equiv='content-type' content='text/html;charset=utf-8')
-    link(rel='shortcut icon' href='static/images/favicon.ico' type='image/vnd.microsoft.icon')
-    link(rel='stylesheet' href='vendor.css')
-    link(rel='stylesheet' href='styles.css')
     
+    link(rel='shortcut icon' href='/static/images/favicon.ico' type='image/vnd.microsoft.icon')    
+    link(rel='stylesheet' href='/vendor.css')
+    link(rel='stylesheet' href='/styles.css')
+    
+    meta(http-equiv='content-type' content='text/html;charset=utf-8')
+    meta(name="author", content="Служба доставки vozim.by")
+    meta(name="keywords", content="доставка по Беларуси, доставка по РБ, служба доставки по РБ")
+    meta(name="description", content="Служба доставки по Беларуси vozim.by - доставка в любой город, низкие цены, сжатые сроки. Курьерская служба доставки по РБ")
+
   body(class='c-page-' + page)
     .g-container
       block content
@@ -21,5 +27,5 @@ html
       
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
     script(src='//maps.googleapis.com/maps/api/js?key=AIzaSyCHTJEYsjlRq6W6AWKeaZQFs6L3feYCMOc&sensor=false&ver=1')
-    script(src='vendor.js')
-    script(src='scripts.js')
+    script(src='/vendor.js')
+    script(src='/scripts.js')

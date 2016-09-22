@@ -1,4 +1,4 @@
-var API_ADDRESS = '//api.vozimby.local/';
+var API_ADDRESS = '//api.vozim.by/';
 
 window.app.registerComponent('storage', function($) {
   return {
