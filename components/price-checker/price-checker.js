@@ -1,5 +1,8 @@
 window.app.registerComponent('price-checker', function($) {
   return {
+    isLocationReady: false,
+    isRatesReady: false,
+
     init: function() {
       $('.tip').tooltip({
         html:true,
@@ -31,7 +34,6 @@ window.app.registerComponent('price-checker', function($) {
 
       var calculatorRoot = $('#calculation').first();
       if (calculatorRoot.size() == 0) return;
-      var calculatorMap = jQuery('#calculator-map-modal').first();
 
       var formatMoney = function(n, c, d, t) {
         var c = isNaN(c = Math.abs(c)) ? 2 : c,
@@ -68,50 +70,6 @@ window.app.registerComponent('price-checker', function($) {
         calculatorRoot.find('#clc-result').html('<div class="noresult">' + txt + '</div>');
       };
 
-      var showAddressOnMap = function(bundle, address) {
-        calculatorMap.find('.modal-title').text(address);
-        var watchButton = bundle.find('.watch-on-map').first();
-        watchButton.removeClass('filled');
-        var geocoder = new google.maps.Geocoder();
-        geocoder.geocode({
-          'address': address,
-          'region': 'by',
-        }, function(results, status) {
-          if (status != google.maps.GeocoderStatus.OK) return;
-          watchButton.addClass('filled');
-          watchButton.unbind('click').click(function() {
-            if (!$(this).hasClass('filled')) return;
-            calculatorMap.modal('show');
-            calculatorMap.find('.close').unbind('click').click(function() {
-              calculatorMap.modal('hide');
-            });
-            setTimeout(function() {
-              var directionsDisplay = new google.maps.DirectionsRenderer();
-              var directionsService = new google.maps.DirectionsService();
-              var mapcenter = new google.maps.LatLng(53.900, 27.566666);
-              var map = new google.maps.Map(document.getElementById('calculator-map-canvas'), {
-                zoom: 10,
-                center: mapcenter
-              });
-              directionsDisplay.setMap(map);
-              map.setCenter(results[0].geometry.location);
-              var marker = new google.maps.Marker({
-                map: map,
-                position: results[0].geometry.location
-              });
-              directionsService.route({
-                origin: mapcenter,
-                destination: results[0].geometry.location,
-                travelMode: google.maps.TravelMode.DRIVING
-              }, function(result, status) {
-                if (status == google.maps.DirectionsStatus.OK) {
-                  directionsDisplay.setDirections(result);
-                }
-              });
-            }, 200);
-          });
-        });
-      };
 
       calculatorRoot.find('#clc-sender').change(function() {
         calculatorRoot.find('.control-group-ctselect option:first').prop('selected', true);
@@ -131,7 +89,12 @@ window.app.registerComponent('price-checker', function($) {
         calculatorRoot.find('.control-group-ctselect').removeClass('hidden');
       });
 
+      var that = this;
+
       calculatorRoot.find('#clc-calculation-type').change(function() {
+        that.fetchRates();
+        that.fetchLocation();
+
         var val = $(this).val();
         if (val == '- выберите -') {
           $(this).parent().removeClass('filled');
@@ -161,92 +124,6 @@ window.app.registerComponent('price-checker', function($) {
           calculatorRoot.find('.control-group-dimension').addClass('hidden');
           calculatorRoot.find('.control-group-cost').removeClass('force-hidden');
         }
-      });
-
-      window.app.storage.get('rates', function(data) {
-        var typeControl = calculatorRoot.find('#clc-typeid');
-        typeControl.append(jQuery(data));
-        typeControl.dependentSelects({
-          placeholderOption: '- выберите -'
-        });
-        typeControl.parent().find('select').change(function() {
-          var lastSelect = typeControl.parent().find('select:visible:last');
-          var options = lastSelect.children('option');
-          if (options.size() == 2) {
-            var lastOption = options.last();
-            if (!lastOption.prop('selected')) {
-              lastOption.prop('selected', true).attr('selected', 'selected');
-              lastSelect.trigger('change');
-            }
-          }
-          var opt = typeControl.parent().find('select:visible option:selected:last');
-          var val = opt.val();
-          if (val == '- выберите -') {
-            $(this).parent().removeClass('filled');
-            return;
-          } else {
-            $(this).parent().addClass('filled');
-          }
-          var cast = opt.data('cast');
-          if (cast == '1') {
-            calculatorRoot.find('.control-group-dimension').removeClass('hidden');
-          } else {
-            calculatorRoot.find('.control-group-dimension').addClass('hidden');
-          }
-          if (calculatorRoot.find('.control-group-cost:not(.force-hidden)').size() > 0) {
-            calculatorRoot.find('.control-group-cost:not(.force-hidden)').removeClass('hidden');
-            calculatorRoot.find('.control-group-cost input').bind('keyup', function() {
-              calculatorRoot.find('.control-group-locality').removeClass('hidden');
-              calculatorRoot.find('.control-group-additional').removeClass('hidden');
-            });
-          } else {
-            calculatorRoot.find('.control-group-locality').removeClass('hidden');
-            calculatorRoot.find('.control-group-additional').removeClass('hidden');
-          }
-          calculatorRoot.find('.control-group:visible').removeClass('last');
-          calculatorRoot.find('.control-group:visible:last').addClass('last');
-        });
-      });
-
-      window.app.storage.get('location', function(data) {
-        calculatorRoot.find('.clc-locality-input').typeahead({
-          source: data,
-          matcher: function(item) {
-            var query = this.query.toLowerCase();
-            var itemRaw = item;
-            if (query.split(' ').length == 1)
-              itemRaw = item.split(' ')[0];
-            var rgx = new RegExp('.*' + query + '.*', 'i');
-            return rgx.test(itemRaw);
-          },
-        }).bind('change blur', function() {
-          var bundle = $(this).parents('.control-group-locality').first();
-          if (data.indexOf($(this).val()) === -1) {
-            $(this).val('');
-            bundle.find('.watch-on-map').removeClass('filled');
-          } else {
-            calculatorRoot.find('.control-group-additional').removeClass('hidden');
-            calculatorRoot.find('.control-group:visible').removeClass('last');
-            calculatorRoot.find('.control-group:visible:last').addClass('last');
-            var v = $(this).val();
-            var address = '';
-            if (parts = v.match(/(.+) \(([^,]+), ([^,]+)\)/)) {
-              address = parts[1] + ', Беларусь';
-            } else if (parts = v.match(/(.+) \(([^,]+)\)/)) {
-              address = 'город ' + parts[1] + ', ' + parts[2] + ', Беларусь';
-            }
-            showAddressOnMap(bundle, address.replace('обл.', 'область'));
-          }
-          if ($(this).attr('name') == 'locality-from') {
-            var fieldValue = $(this).val();
-            var storePointControl = calculatorRoot.find('.controls-fromstore');
-            if (fieldValue == 'Минск (Минский р-н, Минская обл.)') {
-              storePointControl.removeClass('hidden');
-            } else {
-              storePointControl.addClass('hidden');
-            }
-          }
-        });
       });
 
       calculatorRoot.find('input, select').bind('change keyup', function(e) {
@@ -317,6 +194,148 @@ window.app.registerComponent('price-checker', function($) {
             setupCalculatorResult('На данный момент калькулятор недоступен');
             return;
           });
+      });
+    },
+
+    fetchLocation: function() {
+      if (this.isLocationReady) return;
+      var calculatorRoot = $('#calculation').first();
+      var calculatorMap = jQuery('#calculator-map-modal').first();
+      
+      var showAddressOnMap = function(bundle, address) {
+        calculatorMap.find('.modal-title').text(address);
+        var watchButton = bundle.find('.watch-on-map').first();
+        watchButton.removeClass('filled');
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({
+          'address': address,
+          'region': 'by',
+        }, function(results, status) {
+          if (status != google.maps.GeocoderStatus.OK) return;
+          watchButton.addClass('filled');
+          watchButton.unbind('click').click(function() {
+            if (!$(this).hasClass('filled')) return;
+            calculatorMap.modal('show');
+            calculatorMap.find('.close').unbind('click').click(function() {
+              calculatorMap.modal('hide');
+            });
+            setTimeout(function() {
+              var directionsDisplay = new google.maps.DirectionsRenderer();
+              var directionsService = new google.maps.DirectionsService();
+              var mapcenter = new google.maps.LatLng(53.900, 27.566666);
+              var map = new google.maps.Map(document.getElementById('calculator-map-canvas'), {
+                zoom: 10,
+                center: mapcenter
+              });
+              directionsDisplay.setMap(map);
+              map.setCenter(results[0].geometry.location);
+              var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+              });
+              directionsService.route({
+                origin: mapcenter,
+                destination: results[0].geometry.location,
+                travelMode: google.maps.TravelMode.DRIVING
+              }, function(result, status) {
+                if (status == google.maps.DirectionsStatus.OK) {
+                  directionsDisplay.setDirections(result);
+                }
+              });
+            }, 200);
+          });
+        });
+      };
+
+      window.app.storage.get('location', function(data) {
+        calculatorRoot.find('.clc-locality-input').typeahead({
+          source: data,
+          matcher: function(item) {
+            var query = this.query.toLowerCase();
+            var itemRaw = item;
+            if (query.split(' ').length == 1)
+              itemRaw = item.split(' ')[0];
+            var rgx = new RegExp('.*' + query + '.*', 'i');
+            return rgx.test(itemRaw);
+          },
+        }).bind('change blur', function() {
+          var bundle = $(this).parents('.control-group-locality').first();
+          if (data.indexOf($(this).val()) === -1) {
+            $(this).val('');
+            bundle.find('.watch-on-map').removeClass('filled');
+          } else {
+            calculatorRoot.find('.control-group-additional').removeClass('hidden');
+            calculatorRoot.find('.control-group:visible').removeClass('last');
+            calculatorRoot.find('.control-group:visible:last').addClass('last');
+            var v = $(this).val();
+            var address = '';
+            if (parts = v.match(/(.+) \(([^,]+), ([^,]+)\)/)) {
+              address = parts[1] + ', Беларусь';
+            } else if (parts = v.match(/(.+) \(([^,]+)\)/)) {
+              address = 'город ' + parts[1] + ', ' + parts[2] + ', Беларусь';
+            }
+            showAddressOnMap(bundle, address.replace('обл.', 'область'));
+          }
+          if ($(this).attr('name') == 'locality-from') {
+            var fieldValue = $(this).val();
+            var storePointControl = calculatorRoot.find('.controls-fromstore');
+            if (fieldValue == 'Минск (Минский р-н, Минская обл.)') {
+              storePointControl.removeClass('hidden');
+            } else {
+              storePointControl.addClass('hidden');
+            }
+          }
+        });
+      });
+    },
+
+    fetchRates: function() {
+      if (this.isRatesReady) return;
+      var calculatorRoot = $('#calculation').first();
+
+      window.app.storage.get('rates', function(data) {
+        var typeControl = calculatorRoot.find('#clc-typeid');
+        typeControl.append(jQuery(data));
+        typeControl.dependentSelects({
+          placeholderOption: '- выберите -'
+        });
+        typeControl.parent().find('select').change(function() {
+          var lastSelect = typeControl.parent().find('select:visible:last');
+          var options = lastSelect.children('option');
+          if (options.size() == 2) {
+            var lastOption = options.last();
+            if (!lastOption.prop('selected')) {
+              lastOption.prop('selected', true).attr('selected', 'selected');
+              lastSelect.trigger('change');
+            }
+          }
+          var opt = typeControl.parent().find('select:visible option:selected:last');
+          var val = opt.val();
+          if (val == '- выберите -') {
+            $(this).parent().removeClass('filled');
+            return;
+          } else {
+            $(this).parent().addClass('filled');
+          }
+          var cast = opt.data('cast');
+          if (cast == '1') {
+            calculatorRoot.find('.control-group-dimension').removeClass('hidden');
+          } else {
+            calculatorRoot.find('.control-group-dimension').addClass('hidden');
+          }
+          if (calculatorRoot.find('.control-group-cost:not(.force-hidden)').size() > 0) {
+            calculatorRoot.find('.control-group-cost:not(.force-hidden)').removeClass('hidden');
+            calculatorRoot.find('.control-group-cost input').bind('keyup', function() {
+              calculatorRoot.find('.control-group-locality').removeClass('hidden');
+              calculatorRoot.find('.control-group-additional').removeClass('hidden');
+            });
+          } else {
+            calculatorRoot.find('.control-group-locality').removeClass('hidden');
+            calculatorRoot.find('.control-group-additional').removeClass('hidden');
+          }
+          calculatorRoot.find('.control-group:visible').removeClass('last');
+          calculatorRoot.find('.control-group:visible:last').addClass('last');
+        });
       });
     }
   }

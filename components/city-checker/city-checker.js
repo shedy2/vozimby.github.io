@@ -1,11 +1,15 @@
 window.app.registerComponent('city-checker', function($) {
   return {
+    isReady: false,
+
     init: function() {
-      this.prepareData();
+      $('#checkcityinp').bind('focus', $.proxy(this.prepareData, this))
       $('#citychecker').bind('submit', this.handleSubmit);
     },
 
     prepareData: function() {
+      if (this.isReady) return;
+      this.isReady = true;
       document.availibleCities = [];
       document.availibleCitiesLabels = [];
       window.app.storage.get('schedule', function(data) {

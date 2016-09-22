@@ -24,5 +24,8 @@
     "deploy": "rm -rf build && gulp build && rsync -rvc dist/ push.org.ru:www/files/vozim.by/",
     "production": "rm -rf build production && gulp production",
     "push-build": "gulp build && git checkout build && git fetch && git reset --hard origin/build && cp -r dist/* . && git add --all && git commit -m \"`date \"+%Y-%m-%d %H:%m\"`\" && git push && git checkout master"
+  },
+  "devDependencies": {
+    "gulp-imagemin": "^3.0.3"
   }
 }

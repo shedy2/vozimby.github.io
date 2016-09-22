@@ -12,7 +12,8 @@ var gulp         = require('gulp'),
     rev          = require('gulp-rev'),
     revReplace   = require('gulp-rev-replace'),
     filter       = require('gulp-filter'),
-    clean        = require('gulp-clean')
+    clean        = require('gulp-clean'),
+    imagemin     = require('gulp-imagemin')
 
 gulp.task('pages', function() {
   return gulp.src('pages/*.jade')
@@ -52,16 +53,18 @@ gulp.task('scripts', ['scripts-vendor'], function() {
 })
 
 gulp.task('static', function() {
-  return gulp.src('static/**')
+  return gulp.src(['static/**'])
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/static'))
     .pipe(browserSync.stream())
 })
+
 
 gulp.task('production', ['build'], function() {
   var jsFilter = filter('dist/*.js', { restore: true })
       cssFilter = filter('dist/*.css', { restore: true }),
       jsAndCssFilter = filter(['dist/*.js', 'dist/*.css'], { restore: true })
-      staticFilter = filter('dist/static/**/*', { restore: true }),
+      staticFilter = filter(['dist/static/**/*'], { restore: true }),
       staticAndStylesFilter = filter(['dist/static/**/*', 'dist/*.css'], { restore: true }),
       miscFilter = filter(['public/*'], { restore: true })
 
