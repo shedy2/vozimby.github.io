@@ -1,0 +1,19 @@
+extends layout/layout
+
+block variables
+  - var page = 'job'
+  - var title = 'Страница не найдена, или была удалена'
+
+block content
+  include ../components/header/header
+  - var navigation = 0
+  include ../components/navigation/navigation
+
+  .g-page-content
+
+    h1.g-line Страница не найдена - 404
+    div.intro  
+      | Похоже что страница, которую вы запрашиваете, не найдена или была
+      | удалена. Попробуйте начать с <a href="/">главной страницы</a>. 
+
+  include ../components/footer/footer
