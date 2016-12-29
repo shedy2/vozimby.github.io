@@ -1,5 +1,4 @@
-// var API_ADDRESS = '//api.vozim.by/';
-var API_ADDRESS = 'http://apicrm.hcbogdan.com/';
+var API_ADDRESS = '//api.vozim.by/';
 
 window.app.registerComponent('storage', function($) {
   return {

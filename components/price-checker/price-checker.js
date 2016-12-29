@@ -25,18 +25,12 @@ window.app.registerComponent('price-checker', function($) {
           this.value = this.value.replace(/\D/g, '');
       });
 
-      $('.byn-input').inputmask('decimal', {
-    		radixPoint: ',',
-    		digits: 2,
-    		autoGroup: true,
-    		groupSeparator: ' ',
-    		allowMinus: false,
-    		rightAlign: false,
-    		onBeforeMask: function (value, opts) {
-    			if (value == '0.00') return '';
-    			return ('' + value).replace('.', ',');
-    		}
-    	});
+      $('.numeric').autoNumeric('init', {
+        aSep: '.',
+        aDec: ',',
+        vMin: '0',
+        vMax: '999999999999'
+      });
 
       var calculatorRoot = $('#calculation').first();
       if (calculatorRoot.size() == 0) return;
@@ -52,7 +46,9 @@ window.app.registerComponent('price-checker', function($) {
       };
 
       var formatBynCost = function(nm) {
-        return ('' + parseFloat(nm).toFixed(2)).replace('.', ',') + ' руб.';
+        var byrValue = parseInt(('' + nm).replace(/[^0-9]/g, ''));
+        var bynDv = 10000;
+        return ('' + (byrValue / bynDv).toFixed(2)).replace('.', ',') + ' (' + formatMoney(nm, 0, '.', '.') + ') руб.';
       };
 
       var formatClcDays = function(s) {
@@ -205,7 +201,7 @@ window.app.registerComponent('price-checker', function($) {
       if (this.isLocationReady) return;
       var calculatorRoot = $('#calculation').first();
       var calculatorMap = jQuery('#calculator-map-modal').first();
-
+      
       var showAddressOnMap = function(bundle, address) {
         calculatorMap.find('.modal-title').text(address);
         var watchButton = bundle.find('.watch-on-map').first();
