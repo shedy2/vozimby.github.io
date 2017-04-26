@@ -107,6 +107,9 @@ window.app.registerComponent('price-checker', function($) {
         } else {
           $(this).parent().addClass('filled');
         }
+
+        calculatorRoot.find('#clc-goodcost').val('');
+
         if (val == '2') {
           calculatorRoot.find('.control-group-typeid').addClass('hidden');
           calculatorRoot.find('.control-group-dimension').removeClass('hidden');
@@ -127,6 +130,7 @@ window.app.registerComponent('price-checker', function($) {
         } else if (val == '1') {
           calculatorRoot.find('.control-group-typeid').removeClass('hidden');
           calculatorRoot.find('.control-group-dimension').addClass('hidden');
+          calculatorRoot.find('.control-group-dimension input').val('');
           calculatorRoot.find('.control-group-cost').removeClass('force-hidden');
         }
       });
@@ -203,7 +207,11 @@ window.app.registerComponent('price-checker', function($) {
     },
 
     fetchLocation: function() {
-      if (this.isLocationReady) return;
+      if (this.isLocationReady) {
+        return;
+      }
+      this.isRatesReady = true;
+
       var calculatorRoot = $('#calculation').first();
       var calculatorMap = jQuery('#calculator-map-modal').first();
 
@@ -295,7 +303,11 @@ window.app.registerComponent('price-checker', function($) {
     },
 
     fetchRates: function() {
-      if (this.isRatesReady) return;
+      if (this.isRatesReady) {
+        return;
+      }
+      this.isRatesReady = true;
+
       var calculatorRoot = $('#calculation').first();
 
       window.app.storage.get('rates', function(data) {
