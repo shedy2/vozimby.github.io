@@ -1,0 +1,146 @@
+$component-width: 890px;
+
+.msk-route {
+  width: $component-width;
+  margin: 0 auto;
+
+  font-size: 17px;
+  font-weight: normal;
+
+  &-p {
+    width: $component-width;
+    padding-bottom: 35px;
+    margin: 0 auto;
+    font-weight: bold;
+
+    &-title {
+      font-size: 18px;
+    }
+
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      margin-top: 9px;
+      font-size: 17px;
+
+      li {
+        float: left;
+        width: 206px;
+      }
+    }
+  }
+
+  &-head {
+    text-align: center;
+    font-size: 22px;
+    margin: 39px 0 39px;
+  }
+
+  &-adv {
+    padding: 0;
+    line-height: 22px;
+
+    &-list {
+      padding: 0;
+      margin: 0;
+
+      &--first {
+        float: left;
+        width: 50%;
+      }
+
+      &--last {
+        float: right;
+        width: 40%;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &-partners {
+    margin-top: 73px;
+    &-ico {
+      height: 40px;
+      background: url(static/images/msk-partner.png) 50% no-repeat;
+    }
+  }
+
+
+  &-price {
+    margin-top: 77px;
+
+    &-tbl {
+      margin-top: 47px;
+      width: 100%;
+
+      border-collapse: separate;
+      table-layout: fixed;
+      border-spacing: 4px;
+      text-align: center;
+
+      div {
+        padding: 10px 2px;
+      }
+
+      th div {
+        color: #fff;
+        background-color: #a7a7a7;
+      }
+
+      th:nth-child(2n + 1) div {
+        background-color: #3d9cd4;
+      }
+
+      td div {
+        margin: 4px;
+      }
+
+      td:nth-child(2n + 1) div {
+        background-color: #3d9cd4;
+        color: #fff;
+      }
+
+      td:nth-child(2n) div {
+        background: #f4f4f4;
+      }
+
+      th:nth-child(2n),
+      td:nth-child(2n) {
+        width: 100px;
+      }
+    }
+  }
+
+
+  &-srv {
+    margin-top: 30px;
+
+    &-col {
+      float: left;
+      width: 50%;
+
+      &--first {
+        width: 528px;
+      }
+
+      &--last {
+        width: 200px;
+      }
+    }
+
+    &-head {
+      margin-bottom: 21px;
+    }
+
+    &-line {
+      line-height: 22px;
+    }
+
+    &-p-line {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  }
+
+}

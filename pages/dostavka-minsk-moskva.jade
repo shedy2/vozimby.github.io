@@ -1,0 +1,16 @@
+extends layout/layout
+
+block variables
+  - var page = 'dostavka-minsk-moskva'
+  - var title = 'Доставка Минск – Москва'
+
+block content
+  include ../components/header/header
+  - var navigation = 4
+  include ../components/navigation/navigation
+  
+  .g-page-content
+    h1.g-line Экспресс доставка из Москвы в Минск (всю Беларусь) за 1-2 дня
+    include ../components/msk-route/msk-route
+
+  include ../components/footer/footer

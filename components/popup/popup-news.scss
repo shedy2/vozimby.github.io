@@ -1,0 +1,19 @@
+.popup-news {
+  &-btn {
+    display: inline-block;
+    width: 135px;
+    height: 38px;
+    line-height: 38px;
+    background: url(static/images/common-sprite-buttons.png) 0 -78px no-repeat;
+
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

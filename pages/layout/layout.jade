@@ -17,6 +17,8 @@ html(lang="ru")
     meta(name="author", content="Служба доставки vozim.by")
     meta(name="keywords", content="доставка по Беларуси, доставка по РБ, служба доставки по РБ")
     meta(name="description", content="Служба доставки по Беларуси vozim.by - доставка в любой город, низкие цены, сжатые сроки. Курьерская служба доставки по РБ")
+    
+    include ./local-business.html
 
   body(class='c-page-' + page)
     .g-container
@@ -28,7 +30,8 @@ html(lang="ru")
       
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
     script(src='//maps.googleapis.com/maps/api/js?key=AIzaSyCHTJEYsjlRq6W6AWKeaZQFs6L3feYCMOc&sensor=false&ver=1')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js')
     script(src='/vendor.js')
     script(src='/scripts.js')
     <script type="text/javascript">var blingerWidget = 1067</script>
-    <script type="text/javascript" src="https://blinger.io/js/widget.circle2.js?rnd=193791012"></script>
+    script(src="https://blinger.io/js/widget.circle2.js?rnd=193791012")

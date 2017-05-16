@@ -1,0 +1,53 @@
+.c-how-it-works-msk {
+  overflow: hidden;
+  height: 325px;
+  background: #02a1e3;
+  box-shadow: rgba(0, 0, 0, 0.298039) 0 7px 27px inset;
+
+  color: #fff;
+  text-align: center;
+
+  .way-head {
+    font-size: 26px;
+    padding: 18px 0 42px;
+  }
+
+  .way-wrap {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .way-item {
+    float: left;
+    width: (100% / 3);
+  }
+
+  .way-ico {
+    height: 80px;
+
+    &-lbl {
+      background: url(static/images/msk-lbl.svg) 50% no-repeat;
+    }
+
+    &-day {
+      background: url(static/images/msk-cl.svg) 50% no-repeat;
+    }
+
+    &-box {
+      background: url(static/images/msk-box.svg) 50% no-repeat;
+    }
+  }
+
+  .way-title {
+    font-weight: bold;
+    font-size: 19px;
+    margin: 44px 0 4px;
+  }
+
+  .way-txt {
+    p {
+      margin: 0;
+    }
+  }
+}

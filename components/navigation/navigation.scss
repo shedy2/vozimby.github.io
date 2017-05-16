@@ -29,6 +29,20 @@
     padding-top: 24px;
     position: relative;
     z-index: 20;
+
+    &.noborder {
+      border: none;
+    }
+
+    &:hover,
+    &.active {
+      color: #009ad7;
+    }
+
+    &.redcolor,
+    &.redcolor:hover {
+      color: #e93e34;
+    }
   }
 
   .menu-item span {
@@ -44,10 +58,7 @@
     width: 166px;
   }
 
-  .menu-item:hover,
-  .menu-item.active {
-    color: #009ad7;
-  }
+
 
   .menu-item:hover .icon-lock {
     background-position: -196px -108px;
@@ -85,7 +96,7 @@
     font-weight: bold;
   }
 
-  .menu-item .icon-submenu {
+  .icon-submenu {
     vertical-align: middle;
     height: 30px;
     width: 42px;
@@ -94,20 +105,24 @@
     background: url(static/images/common-sprite.png);
   }
 
-  .menu-item .icon-lock {
+  .icon-lock {
     background-position: -196px -70px;
   }
 
-  .menu-item .icon-onlyrb {
+  .icon-onlyrb {
     background-position: -547px -500px;
   }
 
-  .menu-item .icon-onlyminsk {
+  .icon-onlyminsk {
     background-position: -589px -469px;
   }
 
-  .menu-item .icon-carts {
+  .icon-carts {
     background-position: -586px -435px;
     height: 31px;
+  }
+
+  .icon-new {
+    background: url(static/images/new.svg) 50% no-repeat;
   }
 }

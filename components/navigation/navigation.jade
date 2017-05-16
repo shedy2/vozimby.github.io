@@ -3,20 +3,21 @@
 .c-navigation
   .big-menu.clearfix
     
-    li.menu-item(class= (navigation == 1) ? 'active' : '')
-      a(title='Доставка по Беларуси', href='./')
-        .icon-submenu.icon-onlyrb
-        span Доставка по Беларуси
+    a.menu-item(title='Доставка по Беларуси', href='/', class= (navigation == 1) ? 'active' : '')
+      .icon-submenu.icon-onlyrb
+      span Доставка по Беларуси
         
-    li.menu-item(class= (navigation == 2) ? 'active' : '')
-      a(title='Доставка</br> по Минску', href='dostavka-po-gorodu-minsku.html')
-        .icon-submenu.icon-onlyminsk
-        span Доставка <br> по Минску
+    a.menu-item(title='Доставка</br> по Минску', href='/dostavka-po-gorodu-minsku.html', class= (navigation == 2) ? 'active' : '')
+      .icon-submenu.icon-onlyminsk
+      span Доставка <br> по Минску
           
-    li.menu-item(class= (navigation == 3) ? 'active' : '')
-      a(title='ДОСТАВКА ИЗ ИНТЕРНЕТ-МАГАЗИНОВ', href='dostavka-iz-internet-magazinov.html')
-        .icon-submenu.icon-carts
-        span(style='width: 166px;') ДОСТАВКА ИЗ ИНТЕРНЕТ-МАГАЗИНОВ
+    a.menu-item(title='Доставка из интернет магазинов', href='/dostavka-iz-internet-magazinov.html', class= (navigation == 3) ? 'active' : '')
+      .icon-submenu.icon-carts
+      span(style='width: 166px;') ДОСТАВКА ИЗ ИНТЕРНЕТ-МАГАЗИНОВ
+        
+    a.menu-item.redcolor.noborder(title='Доставка Минск - Москва', href='/dostavka-minsk-moskva.html', class= (navigation == 4) ? ' active' : '')
+      .icon-submenu.icon-new
+      span(style='width: 166px;') ДОСТАВКА <br> МИНСК - МОСКВА
         
     a.menu-item(href='http://b2b.vozim.by/', data-toggle='modal', style='float:right;')
       .icon-submenu.icon-lock
