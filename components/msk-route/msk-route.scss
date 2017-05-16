@@ -121,10 +121,11 @@ $component-width: 890px;
       width: 50%;
 
       &--first {
-        width: 528px;
+        width: 500px;
       }
 
       &--last {
+        margin-left: 28px;
         width: 200px;
       }
     }
