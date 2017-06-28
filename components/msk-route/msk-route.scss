@@ -1,6 +1,6 @@
 $component-width: 890px;
 
-.msk-route {
+.msk {
   width: $component-width;
   margin: 0 auto;
 
@@ -70,17 +70,48 @@ $component-width: 890px;
   &-price {
     margin-top: 77px;
 
-    &-tbl {
-      margin-top: 47px;
-      width: 100%;
+    $tbl-width: 300px;
 
+    &-column {
+      &--tbl {
+        float: left;
+        width: $tbl-width;
+      }
+
+      &--data {
+        margin-left: 405px;
+      }
+    }
+
+
+    &-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 11px;
+    }
+
+
+    &-data {
+      p {
+        margin: 0;
+      }
+
+      ul {
+        margin: 0 0 19px;
+        padding-left: 36px;
+      }
+    }
+
+
+    &-tbl {
+      width: 100%;
       border-collapse: separate;
       table-layout: fixed;
       border-spacing: 4px;
       text-align: center;
 
       div {
-        padding: 10px 2px;
+        padding: 13px 2px;
       }
 
       th div {
@@ -94,6 +125,7 @@ $component-width: 890px;
 
       td div {
         margin: 4px;
+        font-size: 13px;
       }
 
       td:nth-child(2n + 1) div {
@@ -107,40 +139,18 @@ $component-width: 890px;
 
       th:nth-child(2n),
       td:nth-child(2n) {
-        width: 100px;
+        width: 147px;
       }
     }
   }
 
+  &-contact {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
 
-  &-srv {
-    margin-top: 30px;
-
-    &-col {
-      float: left;
-      width: 50%;
-
-      &--first {
-        width: 500px;
-      }
-
-      &--last {
-        margin-left: 28px;
-        width: 200px;
-      }
-    }
-
-    &-head {
-      margin-bottom: 21px;
-    }
-
-    &-line {
-      line-height: 22px;
-    }
-
-    &-p-line {
-      font-weight: bold;
-      margin-bottom: 20px;
+    &--title {
+      margin-top: 39px;
     }
   }
 
