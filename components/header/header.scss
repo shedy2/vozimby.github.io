@@ -1,10 +1,10 @@
 .c-header {
   background-color: #009ad7;
-  height: 83px;
+  // height: 83px;
 
   .header {
     width: 1200px;
-    height: 30px;
+    // height: 30px;
     margin: 0 auto;
     vertical-align: middle;
   }
@@ -266,5 +266,21 @@
 
   #popup-skype i {
     margin-bottom: -4px;
+  }
+
+
+  .direct-contact {
+    color: #fff;
+    font-size: 13px;
+    font-family: Verdana;
+
+    width: 1104px;
+    height: 54px;
+    margin: 0 auto;
+    padding-top: 15px;
+
+    &-list {
+      font-weight: bold;
+    }
   }
 }
