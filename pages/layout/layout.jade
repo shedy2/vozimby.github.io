@@ -20,9 +20,7 @@ html(lang="ru")
     
     include ./local-business.html
 
-  body(class='c-page-' + page)
-    include ./counters.html
-  
+  body(class='c-page-' + page)  
     .g-container
       block content
 
@@ -31,6 +29,7 @@ html(lang="ru")
     include ../../components/popup/popup-map
     include ../../components/popup/popup-news
       
+    include ./counters.html
     script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
     script(src='//maps.googleapis.com/maps/api/js?key=AIzaSyCHTJEYsjlRq6W6AWKeaZQFs6L3feYCMOc&sensor=false&ver=1')
     script(src='//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js')
