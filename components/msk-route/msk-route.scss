@@ -1,117 +1,229 @@
 $component-width: 890px;
 
 .msk {
-  width: $component-width;
-  margin: 0 auto;
-
   font-size: 17px;
   font-weight: normal;
 
   &-p {
     width: $component-width;
-    padding-bottom: 35px;
     margin: 0 auto;
-    font-weight: bold;
 
-    &-title {
-      font-size: 18px;
-    }
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
 
     &-list {
       margin: 0;
       padding: 0;
       list-style: none;
-      margin-top: 9px;
-      font-size: 17px;
+      margin-top: 5px;
 
       li {
-        float: left;
-        width: 206px;
+        display: inline-block;
+        padding: 0 13px;
       }
     }
   }
 
-  &-head {
+
+  &-bf {
+    max-width: 1235px;
+    min-width: 1100px;
+
+    margin: 19px auto 0;
+    padding: 200px 0 0;
+
     text-align: center;
-    font-size: 22px;
-    margin: 39px 0 39px;
-  }
+    background: url(static/images/msk-advs.jpg) top center no-repeat;
 
-  &-adv {
-    padding: 0;
-    line-height: 22px;
+    &-item {
+      float: left;
+      width: 25%;
+      padding: 0 19px;
+      box-sizing: border-box;
 
-    &-list {
-      padding: 0;
-      margin: 0;
-
-      &--first {
-        float: left;
-        width: 50%;
+      &-title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 22px;
       }
 
-      &--last {
-        float: right;
-        width: 40%;
-        white-space: nowrap;
+      &-data {
+        margin-top: 27px;
+        font-size: 15px;
+        line-height: 19px;
       }
     }
   }
 
-  &-partners {
-    margin-top: 73px;
-    &-ico {
-      height: 40px;
-      background: url(static/images/msk-partner.png) 50% no-repeat;
+
+  &-stp {
+    margin-top: 147px;
+
+    color: #fff;
+    background-color: #00a6e5;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0 7px 27px inset;
+
+    &-title {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      padding: 18px 0 8px;
+    }
+
+    &-items {
+      min-width: 1080px;
+      max-width: 1170px;
+
+      margin: 0 auto;
+      padding: 107px 0 34px;
+
+      background: url(static/images/msk-advs2.jpg) top center no-repeat;
+    }
+
+    &-item {
+      float: left;
+      width: 25%;
+
+      padding: 0 44px;
+      box-sizing: border-box;
+
+      &--2 {
+        padding-left: 36px;
+      }
+
+      &--3 {
+        padding-left: 64px;
+        padding-right: 13px;
+      }
+
+      &--4 {
+        padding-left: 110px;
+        padding-right: 0;
+      }
+
+      &-title {
+        height: 55px;
+        font-weight: bold;
+        line-height: 18px;
+      }
+
+      &-data {
+        font-size: 13px;
+      }
+    }
+  }
+
+
+  &-zn {
+    &-title {
+      padding: 40px 0 46px;
+
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    &-items {
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    &-item {
+      width: 360px;
+
+      &--l {
+        float: left;
+      }
+
+      &--r {
+        float: right;
+      }
+
+      &-title {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      &-data {
+        padding: 16px 0 0;
+        height: 225px;
+
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      &-b {
+        font-weight: bold;
+        margin-top: 16px;
+      }
+
+      // &-c {
+      // }
+
+      &-btn {
+        margin: 0 auto;
+
+        cursor: pointer;
+        color: #fff;
+
+        width: 135px;
+        height: 38px;
+
+        line-height: 38px;
+        font-size: 13px;
+        text-align: center;
+
+        background: url(static/images/common-sprite-buttons.png) 0 -78px no-repeat;
+
+        &:hover {
+          background-position: 0 -39px;
+        }
+      }
     }
   }
 
 
   &-price {
-    margin-top: 77px;
-
-    $tbl-width: 300px;
-
-    &-column {
-      &--tbl {
-        float: left;
-        width: $tbl-width;
-      }
-
-      &--data {
-        margin-left: 405px;
-      }
-    }
-
+    margin-top: 50px;
 
     &-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 11px;
+      text-align: center;
+      font-size: 25px;
+      margin: 0;
     }
 
-
-    &-data {
-      p {
-        margin: 0;
-      }
-
-      ul {
-        margin: 0 0 19px;
-        padding-left: 36px;
-      }
+    &-columns {
+      width: 1180px;
+      margin: 52px auto 0;
     }
 
+    &-column {
+      &--l {
+        float: left;
+        width: 450px;
+      }
+
+      &--r {
+        margin-left: 500px;
+      }
+    }
 
     &-tbl {
       width: 100%;
-      border-collapse: separate;
+      text-align: center;
+
       table-layout: fixed;
       border-spacing: 4px;
-      text-align: center;
+      border-collapse: separate;
 
       div {
         padding: 13px 2px;
+      }
+
+      th p {
+        margin: 0;
       }
 
       th div {
@@ -126,6 +238,7 @@ $component-width: 890px;
       td div {
         margin: 4px;
         font-size: 13px;
+        min-height: 18px;
       }
 
       td:nth-child(2n + 1) div {
@@ -144,14 +257,40 @@ $component-width: 890px;
     }
   }
 
-  &-contact {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 15px;
 
-    &--title {
-      margin-top: 39px;
+  &-callme {
+    text-align: center;
+    margin: 64px 0;
+
+    &-title {
+      font-weight: bold;
+      font-size: 20px;
+      margin: 0 0 48px;
+    }
+
+    &-btn {
+      display: inline-block;
+      padding: 8px 35px;
+
+      cursor: pointer;
+      box-shadow: rgb(166, 83, 0) 0px 3px 0px 0px;
+      background: linear-gradient(rgb(249, 223, 51) 5%, rgb(241, 157, 21) 100%) rgb(249, 223, 51);
+
+      border-radius: 3px;
+      border: 1px solid rgb(250, 182, 55);
+
+      // color: rgb(255, 255, 255);
+      font-size: 15px;
+      font-weight: bold;
+
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: rgb(186, 146, 115) 0px 1px 0px;
+
+      &:hover {
+        background: linear-gradient(rgb(241, 157, 21) 5%, rgb(249, 223, 51) 100%) rgb(241, 157, 21);
+      }
     }
   }
-
 }

@@ -6,8 +6,12 @@ block variables
 
 block content
   include ../components/header/header
+  
   - var navigation = 4
   include ../components/navigation/navigation
+
+  - var heroTitle = '<h2 style="text-transform:uppercase;"><div>Доставка за <b style="font-size:32px;">1 – 2 дня!</b></div><div style="font-size:25px;"><b>По направлению Москва – Беларусь!</b></div></h2>'
+  include ../components/hero/hero
   
   .g-page-content
     h1.g-line Экспресс доставка из Москвы в Минск (всю Беларусь) за 1-2 дня

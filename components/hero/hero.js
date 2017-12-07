@@ -6,7 +6,9 @@ window.app.registerComponent('hero', function($) {
         animation: false
       });
 
-      this.animateClouds();
+      if (location.host.substr(0,1) != 'l') {
+        this.animateClouds();
+      }
     },
 
     animateClouds: function() {

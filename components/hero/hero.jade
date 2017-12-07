@@ -10,13 +10,7 @@
       .map_top
         a(href='/')
           .logo
-        .info
-          h2(style='text-transform:uppercase;')
-            | Доставка за 
-            b(style='font-size:32px;') 1
-            |  день!
-            br
-            | В любой город Беларуси!
+        .info!= heroTitle
         .map_hint.minsk
           a(data-toggle='tooltip', data-placement='top', title="<div class='popline'>\
           <div class='office-line'><i class='icon icon-wbtown'></i> Офис:</div>\
