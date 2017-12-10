@@ -1,0 +1,15 @@
+extends layout/layout
+
+block variables
+  - var page = 'index'
+  - var title = 'Служба доставки по Беларуси'
+
+block content
+  include ../components/header/header
+  
+  - var navigation = 0
+  include ../components/navigation/navigation
+
+  include ../components/thanks/thanks
+  
+  include ../components/footer/footer

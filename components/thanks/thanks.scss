@@ -1,0 +1,48 @@
+.tx {
+  text-align: center;
+  padding: 58px 0;
+
+  &-title {
+    font-weight: bold;
+    font-size: 28px;
+  }
+
+  &-dsc {
+    font-size: 25px;
+    padding: 28px 0 0;
+  }
+
+  &-stupid-image {
+    width: 650px;
+    height: 336px;
+    margin: 84px auto;
+    background: url(static/images/stupid-img.jpg) 50% no-repeat;
+  }
+
+  &-goback {
+    display: inline-block;
+    padding: 8px 35px;
+
+    cursor: pointer;
+    box-shadow: rgb(166, 83, 0) 0px 3px 0px 0px;
+    background: linear-gradient(rgb(249, 223, 51) 5%, rgb(241, 157, 21) 100%) rgb(249, 223, 51);
+
+    border-radius: 3px;
+    border: 1px solid rgb(250, 182, 55);
+
+    color: #333333;
+    font-size: 15px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: rgb(186, 146, 115) 0px 1px 0px;
+
+    &:hover {
+      color: #333333;
+      text-decoration: none;
+      background: linear-gradient(rgb(241, 157, 21) 5%, rgb(249, 223, 51) 100%) rgb(241, 157, 21);
+    }
+  }
+}

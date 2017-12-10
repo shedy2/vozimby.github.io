@@ -19,18 +19,24 @@ html(lang="ru")
     meta(name="description", content="Служба доставки по Беларуси vozim.by - доставка в любой город, низкие цены, сжатые сроки. Курьерская служба доставки по РБ")
     
     include ./local-business.html
+    include ./counters.html
 
   body(class='c-page-' + page)  
     .g-container
       block content
 
     include ../../components/popup/all
-      
-    include ./counters.html
-    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+          
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js')
     script(src='//maps.googleapis.com/maps/api/js?key=AIzaSyCHTJEYsjlRq6W6AWKeaZQFs6L3feYCMOc&sensor=false&ver=1')
     script(src='//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js')
+    
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/phone-codes/phone.min.js")
+    
     script(src='/vendor.js')
     script(src='/scripts.js')
+
     <script type="text/javascript">var blingerWidget = 1067</script>
     script(src="https://blinger.io/js/widget.circle2.js?rnd=193791012")
+    
