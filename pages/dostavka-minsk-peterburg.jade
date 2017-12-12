@@ -1,0 +1,20 @@
+extends layout/layout
+
+block variables
+  - var page = 'dostavka-minsk-peterburg'
+  - var title = 'Доставка Минск – Петербург'
+
+block content
+  - var mainEmail = "ru@vozim.by"
+  include ../components/header/header
+  
+  - var navigation = 5
+  include ../components/navigation/navigation
+
+  include ../components/hero-spb/hero-spb
+  
+  .g-page-content
+    h1.g-line Экспресс доставка из Санкт-Петербурга в Минск (всю Беларусь) за 2-3 дня
+    include ../components/spb-route/spb-route
+
+  include ../components/footer/footer

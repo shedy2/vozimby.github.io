@@ -13,11 +13,15 @@
           
     a.menu-item(title='Доставка из интернет магазинов', href='/dostavka-iz-internet-magazinov.html', class= (navigation == 3) ? 'active' : '')
       .icon-submenu.icon-carts
-      span(style='width: 166px;') ДОСТАВКА ИЗ ИНТЕРНЕТ-МАГАЗИНОВ
+      span ДОСТАВКА ИЗ ИНТЕРНЕТ-МАГАЗИНОВ
         
-    a.menu-item.redcolor.noborder(title='Доставка Минск - Москва', href='/dostavka-minsk-moskva.html', class= (navigation == 4) ? ' active' : '')
+    a.menu-item.menu-item--green(title='Доставка Минск - Москва', href='/dostavka-minsk-moskva.html', class= (navigation == 4) ? ' active' : '')
+      .icon-submenu.icon-onlyminsk
+      span ДОСТАВКА <br> МИНСК - МОСКВА
+    
+    a.menu-item.redcolor.noborder(title='Доставка Минск - Петербург', href='/dostavka-minsk-peterburg.html', class= (navigation == 5) ? ' active' : '')
       .icon-submenu.icon-new
-      span(style='width: 166px;') ДОСТАВКА <br> МИНСК - МОСКВА
+      span ДОСТАВКА <br> МИНСК - ПЕТЕРБУРГ
         
     a.menu-item(href='http://b2b.vozim.by/', data-toggle='modal', style='float:right;')
       .icon-submenu.icon-lock
