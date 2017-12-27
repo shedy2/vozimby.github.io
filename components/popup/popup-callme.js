@@ -24,7 +24,7 @@ window.app.registerComponent('popup-callme', function($) {
     },
 
     handleSuccess: function(result) {
-      location.href = '/info.html';
+      location.href = '/thank-you.html';
     },
   }
 })

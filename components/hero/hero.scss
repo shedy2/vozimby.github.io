@@ -183,55 +183,55 @@
   }
 
   #pulsar1 {
-    animation-name: courier-path1;
+    animation-name: rb-path1;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 120000ms;
   }
 
   #pulsar2 {
-    animation-name: courier-path2;
+    animation-name: rb-path2;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 120000ms;
   }
 
   #pulsar3 {
-    animation-name: courier-path3;
+    animation-name: rb-path3;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 120000ms;
   }
 
   #pulsar4 {
-    animation-name: courier-path4;
+    animation-name: rb-path4;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 120000ms;
   }
 
   #pulsar5 {
-    animation-name: courier-path5;
+    animation-name: rb-path5;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 120000ms;
   }
 
   #pulsar6 {
-    animation-name: courier-path6;
+    animation-name: rb-path6;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 120000ms;
   }
 
   #pulsar7 {
-    animation-name: courier-path7;
+    animation-name: rb-path7;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 120000ms;
   }
 
-  @-webkit-keyframes courier-path1 {
+  @keyframes rb-path1 {
     0% { transform: translate(0px, 0px); }
     1.54% { transform: translate(-22px, 19px); }
     3.08% { transform: translate(-46px, 33px); }
@@ -300,7 +300,7 @@
     100% { transform: translate(15px, 7px); }
   }
 
-  @-webkit-keyframes courier-path2 {
+  @keyframes rb-path2 {
     0% { transform: translate(0px, 0px); }
     1.39% { transform: translate(-24px, -12px); }
     2.78% { transform: translate(-55px, -15px); }
@@ -376,7 +376,7 @@
     100% { transform: translate(-17px, 15px); }
   }
 
-  @-webkit-keyframes courier-path3 {
+  @keyframes rb-path3 {
     0% { transform: translate(0px, 0px); }
     1.16% { transform: translate(23px, -6px); }
     2.33% { transform: translate(41px, -13px); }
@@ -466,7 +466,7 @@
     100% { transform: translate(18px, 7px); }
   }
 
-  @-webkit-keyframes courier-path4 {
+  @keyframes rb-path4 {
     0% { transform: translate(0px, 0px); }
     1.25% { transform: translate(20px, 9px); }
     2.5% { transform: translate(39px, 11px); }
@@ -550,7 +550,7 @@
     100% { transform: translate(31px, -15px); }
   }
 
-  @-webkit-keyframes courier-path5 {
+  @keyframes rb-path5 {
     0% { transform: translate(0px, 0px); }
     1.22% { transform: translate(18px, 14px); }
     2.44% { transform: translate(31px, 29px); }
@@ -636,7 +636,7 @@
     100% { transform: translate(20px, -10px); }
   }
 
-  @-webkit-keyframes courier-path6 {
+  @keyframes rb-path6 {
     0% { transform: translate(0px, 0px); }
     1.06% { transform: translate(0px, -1.6px); }
     2.13% { transform: translate(8px, -10.6px); }
@@ -734,7 +734,7 @@
     100% { transform: translate(0px, 0.400002px); }
   }
 
-  @-webkit-keyframes courier-path7 {
+  @keyframes rb-path7 {
     0% { transform: translate(0px, 0px); }
     0.709% { transform: translate(-1px, 4.8px); }
     1.42% { transform: translate(10px, 8.8px); }
