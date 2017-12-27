@@ -13,10 +13,11 @@
 window.app.registerComponent('popup-news', function($) {
   return {
     init: function() {
-      if (!Cookies.get('q')) {
-        jQuery('#news-modal').modal('show');
-        Cookies.set('q', 1);
-      }
+      jQuery('#news-modal').modal('show');
+      // if (Cookies.get('q')) {
+      //   return;
+      // }
+      // Cookies.set('q', 1);
     },
   }
 });
