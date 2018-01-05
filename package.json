@@ -22,7 +22,6 @@
   },
   "scripts": {
     "deploy": "rm -rf build && gulp build && rsync -rvc dist/ root@sandbox.hcbogdan.com:/var/www/sandbox/data/www/vozimby.hcbogdan.com",
-    "production": "rm -rf build production && gulp production",
     "release": "rm -rf build production && gulp release",
     "gh": "git subtree push --prefix production origin gh-pages"
   },
