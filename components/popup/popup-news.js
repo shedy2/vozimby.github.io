@@ -13,10 +13,11 @@
 window.app.registerComponent('popup-news', function($) {
   return {
     init: function() {
-      if (Cookies.get('q')) {
+      var cookieName = 'q7';
+      if (Cookies.get(cookieName)) {
         return;
       }
-      Cookies.set('q', 1);
+      Cookies.set(cookieName, 1);
       jQuery('#news-modal').modal('show');
     },
   }
