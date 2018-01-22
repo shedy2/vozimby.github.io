@@ -1,13 +1,13 @@
 
-window.app.registerComponent('popup-news', function($) {
+window.app.registerComponent('popup-spb', function($) {
   return {
     init: function() {
-      var cookieName = 'q7';
+      var cookieName = 'qspb';
       if (Cookies.get(cookieName)) {
         return;
       }
       Cookies.set(cookieName, 1, { expires: 7 });
-      jQuery('#news-modal').modal('show');
+      jQuery('#popup-spb').modal('show');
     },
   }
 });
