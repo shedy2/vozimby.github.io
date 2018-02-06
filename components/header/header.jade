@@ -34,4 +34,7 @@
         
     .direct-contact
       .direct-contact-title Работа с юридическими лицами и интернет-магазинами
-      .direct-contact-list Елена +375 (33)353-82-34, Екатерина +375 (29)681-06-60
+      - if (contacts)
+        .direct-contact-list!= contacts
+      - else
+        .direct-contact-list Елена +375 (33)353-82-34, Екатерина +375 (29)681-06-60
