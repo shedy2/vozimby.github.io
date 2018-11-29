@@ -261,6 +261,9 @@
   -webkit-transition: ease .3s;
   transition: ease .3s;
 }
+.c-navigation .droplinks.russia {
+  bottom: -154px;
+}
 .c-navigation .droplinks a {
   border-top: 1px solid #cecece;
   text-align: left;
@@ -290,5 +293,252 @@ hr {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.vz-china__header {
+  padding: 90px 20px 114px;
+  background: url(../../static/images/china_bg.jpg) center center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.vz-china__header-title {
+  margin: 0;
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 48px;
+  font-size: 40px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.vz-china__header-button {
+  margin: 0 auto;
+  display: block;
+  background: #F6BA23;
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 20px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  padding: 15px;
+  color: #FFFFFF;
+  margin-top: 75px;
+}
+.vz-china__header .caption {
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 24px;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding-top: 20px;
+}
+.vz-china__services {
+  background: #fff;
+  padding: 60px 128px;
+}
+.vz-china__services-title {
+  margin: 0;
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 48px;
+  font-size: 40px;
+  text-align: center;
+  color: #000000;
+}
+.vz-china__services-items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.vz-china__services-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  width: 100%;
+}
+.vz-china__services-item .img {
+  width: 35%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.vz-china__services-item .info {
+  padding-left: 20px;
+  width: 65%;
+}
+.vz-china__services-item .info .title {
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 24px;
+  font-size: 20px;
+  color: #000000;
+}
+.vz-china__services-item .info .desc {
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 18px;
+  font-size: 15px;
+  color: #000000;
+  padding: 20px 0;
+}
+.vz-china__services-item .info .button {
+  background: #F6BA23;
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 20px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  padding: 15px;
+  color: #FFFFFF;
+}
+.vz-china__form {
+  padding: 60px 0;
+  background: #F5F5F5;
+}
+.vz-china__form-title {
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 48px;
+  font-size: 40px;
+  text-align: center;
+  color: #000000;
+}
+.vz-china__form-title span {
+  line-height: 24px;
+  font-size: 20px;
+}
+.vz-china__form-inputs {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.vz-china__form-inputs input {
+  margin-top: 0;
+  margin-right: 20px;
+  margin-left: 0;
+}
+.vz-china__form-inputs .button {
+  background: #F6BA23;
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 20px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  padding: 15px;
+  color: #FFFFFF;
+}
+.vz-china__contact {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(../../static/images/china_bg.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 60px 20px;
+}
+.vz-china__contact-title {
+  margin: 0;
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 48px;
+  font-size: 40px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.vz-china__contact .contacts {
+  padding-top: 40px;
+}
+.vz-china__contact .contacts a {
+  font-family: Verdana;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 24px;
+  font-size: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.vz-china__contact .contacts a:first-child {
+  margin-right: 60px;
 }
 /*# sourceMappingURL=./app.css.map */

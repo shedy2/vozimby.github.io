@@ -220,6 +220,10 @@
         overflow: hidden;
         transition: ease .3s;
 
+        &.russia {
+            bottom: -154px;
+        }
+
         a {
             border-top: 1px solid #cecece;
             text-align: left;
@@ -242,4 +246,218 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.vz-china {
+
+    &__header {
+        padding: 90px 20px 114px;
+        background: url(../../static/images/china_bg.jpg) center center no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-title {
+            margin: 0;
+            font-family: Verdana;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 48px;
+            font-size: 40px;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+
+        &-button {
+            margin: 0 auto;
+            display: block;
+            background: #F6BA23;
+            font-family: Verdana;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 20px;
+            font-size: 16px;
+            text-align: center;
+            border: none;
+            padding: 15px;
+            color: #FFFFFF;
+            margin-top: 75px;
+        }
+
+        .caption {
+            font-family: Verdana;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 24px;
+            font-size: 20px;
+
+            color: #FFFFFF;
+
+            padding-top: 20px;
+
+        }
+    }
+
+    &__services {
+        background: #fff;
+        padding: 60px 128px;
+
+        &-title {
+            margin: 0;
+            font-family: Verdana;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 48px;
+            font-size: 40px;
+            text-align: center;
+
+            color: #000000;
+        }
+
+        &-items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &-item {
+            display: flex;
+            margin-top: 50px;
+            width: 100%;
+            .img {
+                width: 35%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: right;
+            }
+            
+
+            .info {
+                padding-left: 20px;
+                width: 65%;
+                .title {
+                    font-family: Verdana;
+                    font-style: normal;
+                    font-weight: bold;
+                    line-height: 24px;
+                    font-size: 20px;
+
+                    color: #000000;
+                }
+
+                .desc {
+                    font-family: Verdana;
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 18px;
+                    font-size: 15px;
+
+                    color: #000000;
+                    padding: 20px 0;
+                }
+                .button{
+                    background: #F6BA23;
+                    font-family: Verdana;
+                    font-style: normal;
+                    font-weight: bold;
+                    line-height: 20px;
+                    font-size: 16px;
+                    text-align: center;
+                    border: none;
+                    padding: 15px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    &__form {
+        padding: 60px 0;
+        background: #F5F5F5;
+
+        &-title {
+            font-family: Verdana;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 48px;
+            font-size: 40px;
+            text-align: center;
+
+            color: #000000;
+
+            span {
+                line-height: 24px;
+                font-size: 20px;
+            }
+        }
+
+        &-inputs {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+
+            input {
+                margin-top: 0;
+                margin-right: 20px;
+                margin-left: 0;
+            }
+
+            .button {
+                background: #F6BA23;
+                font-family: Verdana;
+                font-style: normal;
+                font-weight: bold;
+                line-height: 20px;
+                font-size: 16px;
+                text-align: center;
+                border: none;
+                padding: 15px;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: url(../../static/images/china_bg.jpg) center center no-repeat;
+        background-size: cover;
+        padding: 60px 20px;
+        
+        &-title {
+            margin: 0;
+            font-family: Verdana;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 48px;
+            font-size: 40px;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+
+        .contacts {
+            padding-top: 40px;
+
+            a {
+                font-family: Verdana;
+                font-style: normal;
+                font-weight: bold;
+                line-height: 24px;
+                font-size: 20px;
+                text-align: center;
+
+                color: #FFFFFF;
+                text-decoration: none;
+                &:first-child {
+                    margin-right: 60px;
+                }
+            }
+        }
+    }
 }
